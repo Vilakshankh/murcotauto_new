@@ -1,66 +1,97 @@
 export default function HowItWorksSection() {
   return (
-    <section className="w-full bg-[#33853F] py-12 md:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
-        <h2 className="text-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-barlow font-extrabold leading-tight mb-8 lg:mb-12">
-          Selling Your Vehicle to Murcot Auto is Easy
-        </h2>
+    <section className="w-full bg-white py-32">
+      <div className="max-w-6xl mx-auto px-8">
+        {/* Section Header */}
+        <div className="mb-24">
+          <div className="w-24 h-1 bg-black mb-8"></div>
+          <h2 className="text-4xl lg:text-6xl font-mono font-bold text-black leading-none tracking-tight mb-6">
+            HOW IT<br />WORKS
+          </h2>
+          <p className="text-lg text-gray-600 font-mono leading-relaxed max-w-lg">
+            Simple three-step process to sell your vehicle.
+          </p>
+        </div>
 
-        {/* Steps Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-[54px] mb-8 lg:mb-12">
+        {/* Process Steps */}
+        <div className="space-y-24">
           {/* Step 1 */}
-          <div className="bg-white rounded-lg border-2 border-[#33853F] shadow-sm p-6 lg:p-8">
-            <div className="text-center space-y-3 lg:space-y-4">
-              <div className="text-[#33853F] text-sm font-poppins font-bold uppercase tracking-[3px] leading-[26px]">
-                Step 1
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-1">
+              <div className="w-16 h-16 bg-black flex items-center justify-center">
+                <span className="text-2xl font-mono font-bold text-white">01</span>
               </div>
-              <h3 className="text-[#1F1F1F] text-lg lg:text-xl font-barlow font-extrabold leading-tight">
-                Tell Us About Your Vehicle
+            </div>
+            <div className="lg:col-span-5">
+              <h3 className="text-2xl font-mono font-bold text-black mb-4 uppercase tracking-wide">
+                Submit Details
               </h3>
-              <p className="text-[#667085] text-sm lg:text-base font-poppins font-normal leading-relaxed">
-                Fill out our quick online form with your vehicle's details. It only takes a minute — and the more info and photos you provide, the more accurate our offer will be.
+              <p className="text-gray-600 font-mono leading-relaxed">
+                Provide your vehicle information through our online form. Include photos and details for the most accurate valuation.
               </p>
+            </div>
+            <div className="lg:col-span-6">
+              <div className="aspect-video bg-gray-100 flex items-center justify-center">
+                <span className="text-gray-400 font-mono text-sm uppercase tracking-wide">
+                  Online Form Interface
+                </span>
+              </div>
             </div>
           </div>
 
           {/* Step 2 */}
-          <div className="bg-white rounded-lg border-2 border-[#33853F] shadow-sm p-6 lg:p-8">
-            <div className="text-center space-y-3 lg:space-y-4">
-              <div className="text-[#33853F] text-sm font-poppins font-bold uppercase tracking-[3px] leading-[26px]">
-                Step 2
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-1 lg:order-1">
+              <div className="w-16 h-16 bg-black flex items-center justify-center">
+                <span className="text-2xl font-mono font-bold text-white">02</span>
               </div>
-              <h3 className="text-[#1F1F1F] text-lg lg:text-xl font-barlow font-extrabold leading-tight">
-                Get a Cash Offer Fast
+            </div>
+            <div className="lg:col-span-5 lg:order-3">
+              <h3 className="text-2xl font-mono font-bold text-black mb-4 uppercase tracking-wide">
+                Get Instant Quote
               </h3>
-              <p className="text-[#667085] text-sm lg:text-base font-poppins font-normal leading-relaxed">
-                We review your submission and send you a competitive, no-obligation offer — usually within the hour. No pressure, no games.
+              <p className="text-gray-600 font-mono leading-relaxed">
+                Receive a competitive, no-obligation offer within one hour. Transparent pricing based on current market data.
               </p>
+            </div>
+            <div className="lg:col-span-6 lg:order-2">
+              <div className="aspect-video bg-gray-100 flex items-center justify-center">
+                <span className="text-gray-400 font-mono text-sm uppercase tracking-wide">
+                  Market Valuation System
+                </span>
+              </div>
             </div>
           </div>
 
           {/* Step 3 */}
-          <div className="bg-white rounded-lg border-2 border-[#33853F] shadow-sm p-6 lg:p-8 md:col-span-2 lg:col-span-1">
-            <div className="text-center space-y-3 lg:space-y-4">
-              <div className="text-[#33853F] text-sm font-poppins font-bold uppercase tracking-[3px] leading-[26px]">
-                Step 3
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-1">
+              <div className="w-16 h-16 bg-black flex items-center justify-center">
+                <span className="text-2xl font-mono font-bold text-white">03</span>
               </div>
-              <h3 className="text-[#1F1F1F] text-lg lg:text-xl font-barlow font-extrabold leading-tight">
-                Free Pickup or Dealership Coordination
+            </div>
+            <div className="lg:col-span-5">
+              <h3 className="text-2xl font-mono font-bold text-black mb-4 uppercase tracking-wide">
+                Complete Sale
               </h3>
-              <p className="text-[#667085] text-sm lg:text-base font-poppins font-normal leading-relaxed">
-                We'll come to you — at home, work, or even your dealership if you're trading in for a new car.
+              <p className="text-gray-600 font-mono leading-relaxed">
+                Schedule pickup at your convenience. We handle all paperwork and complete the transaction on-site.
               </p>
+            </div>
+            <div className="lg:col-span-6">
+              <div className="aspect-video bg-gray-100 flex items-center justify-center">
+                <span className="text-gray-400 font-mono text-sm uppercase tracking-wide">
+                  Professional Pickup Service
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="flex justify-center">
-          <button className="px-8 lg:px-12 py-3 lg:py-4 bg-black rounded-lg hover:bg-gray-800 transition-colors">
-            <span className="text-white text-lg lg:text-xl font-poppins font-medium">
-              sell now
-            </span>
+        {/* CTA */}
+        <div className="mt-32 pt-16 border-t border-gray-200">
+          <button className="px-8 py-4 bg-black text-white font-mono text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors">
+            Start Process
           </button>
         </div>
       </div>

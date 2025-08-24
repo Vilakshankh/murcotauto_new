@@ -1,54 +1,93 @@
+import { Home, Calculator, Car, Shield } from 'lucide-react';
+
 export default function WhySellSection() {
   return (
-    <section className="w-full bg-[#33853F] py-12 md:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-[54px]">
-          {/* Image Side */}
-          <div className="w-full lg:w-1/2 xl:w-[818px] flex justify-center lg:justify-start">
-            <div className="w-full max-w-md md:max-w-lg lg:max-w-none lg:w-full lg:h-[400px] xl:h-[673px] bg-gray-300 rounded-2xl flex items-center justify-center overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                alt="Car selling process" 
-                className="w-full h-full object-cover"
-              />
+    <section className="w-full bg-green-700 mt-16 sm:mt-32">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+        
+        {/* Left Side - Background Image Only */}
+        <div 
+          className="relative bg-cover bg-center bg-no-repeat min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] order-2 lg:order-1"
+          style={{backgroundImage: 'url(/whysellpic.png)'}}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        {/* Right Side - Title, Button, and Benefits List */}
+        <div className="bg-green-700 px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20 min-h-[400px] lg:min-h-[600px] flex flex-col justify-center order-1 lg:order-2">
+          
+          {/* Title and Button */}
+          <div className="mb-8 sm:mb-12">
+            <h2 className="heading-primary-dark text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6 sm:mb-8">
+              What sets Murcot Auto apart
+            </h2>
+            <button className="btn-primary-light">
+              GET STARTED
+            </button>
+          </div>
+
+          {/* Benefits List */}
+          <div className="space-y-6 sm:space-y-8">
+          
+          {/* Comfort */}
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="flex-shrink-0">
+              <Home className="w-6 sm:w-8 h-6 sm:h-8 text-white mt-1" />
+            </div>
+            <div>
+              <h3 className="heading-secondary-dark text-lg sm:text-xl mb-2">Comfort</h3>
+              <p className="text-primary-dark text-sm sm:text-base leading-relaxed">
+                Sell from the comfort of your home
+              </p>
+            </div>
+          </div>
+          
+          <hr className="border-white/20" />
+
+          {/* Tax Benefits */}
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="flex-shrink-0">
+              <Calculator className="w-6 sm:w-8 h-6 sm:h-8 text-white mt-1" />
+            </div>
+            <div>
+              <h3 className="heading-secondary-dark text-lg sm:text-xl mb-2">Tax Benefits</h3>
+              <p className="text-primary-dark text-sm sm:text-base leading-relaxed">
+                Save on taxes when purchasing your next vehicle
+              </p>
+            </div>
+          </div>
+          
+          <hr className="border-white/20" />
+
+          {/* All Vehicles */}
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="flex-shrink-0">
+              <Car className="w-6 sm:w-8 h-6 sm:h-8 text-white mt-1" />
+            </div>
+            <div>
+              <h3 className="heading-secondary-dark text-lg sm:text-xl mb-2">All Vehicles</h3>
+              <p className="text-primary-dark text-sm sm:text-base leading-relaxed">
+                We buy out both financed & leased vehicles
+              </p>
+            </div>
+          </div>
+          
+          <hr className="border-white/20" />
+
+          {/* Security */}
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="flex-shrink-0">
+              <Shield className="w-6 sm:w-8 h-6 sm:h-8 text-white mt-1" />
+            </div>
+            <div>
+              <h3 className="heading-secondary-dark text-lg sm:text-xl mb-2">Security</h3>
+              <p className="text-primary-dark text-sm sm:text-base leading-relaxed">
+                Safe & worry-free process
+              </p>
             </div>
           </div>
 
-          {/* Content Side */}
-          <div className="w-full lg:w-1/2 xl:w-[473px] flex flex-col justify-center text-center lg:text-left space-y-6 lg:space-y-8 xl:space-y-10">
-            {/* Main Heading */}
-            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-barlow font-extrabold leading-tight">
-              Why sell to Murcot Auto?
-            </h2>
-
-            {/* Benefits List */}
-            <div className="text-white text-base sm:text-lg lg:text-xl xl:text-xl font-poppins font-semibold leading-relaxed lg:leading-[40px] space-y-4 lg:space-y-2">
-              <div className="flex items-start lg:items-center gap-3">
-                <span className="text-green-200 text-xl lg:text-2xl mt-1 lg:mt-0">✓</span>
-                <span>Sell from the Comfort of Your Home</span>
-              </div>
-              <div className="flex items-start lg:items-center gap-3">
-                <span className="text-green-200 text-xl lg:text-2xl mt-1 lg:mt-0">✓</span>
-                <span>Sell with ease and save on taxes when purchasing your next vehicle</span>
-              </div>
-              <div className="flex items-start lg:items-center gap-3">
-                <span className="text-green-200 text-xl lg:text-2xl mt-1 lg:mt-0">✓</span>
-                <span>We Buy Out Both Financed & Leased Vehicles</span>
-              </div>
-              <div className="flex items-start lg:items-center gap-3">
-                <span className="text-green-200 text-xl lg:text-2xl mt-1 lg:mt-0">✓</span>
-                <span>Safe & Worry-Free Process</span>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <div className="flex justify-center lg:justify-start">
-              <button className="w-full sm:w-auto max-w-sm lg:max-w-none lg:w-full xl:w-[473px] h-14 lg:h-[60px] bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
-                <span className="text-[#33853F] text-lg lg:text-xl font-poppins font-medium">
-                  Get Started
-                </span>
-              </button>
-            </div>
           </div>
         </div>
       </div>

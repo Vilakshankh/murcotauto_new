@@ -1,195 +1,106 @@
+
 export default function ReviewsSection() {
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
-        <h2 className="text-center text-[#33853F] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-barlow font-extrabold leading-tight mb-8 lg:mb-12">
-          What they say about us!
-        </h2>
-
-        {/* Reviews Container */}
-        <div className="relative mb-8 lg:mb-12">
-          {/* Desktop Grid View */}
-          <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8">
-            {/* Review Card 1 */}
-            <div className="bg-white border-2 border-[#707070] rounded-lg p-6 h-80 flex flex-col">
-              <div className="flex items-start gap-4 mb-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1494790108755-2616b9e4fefe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
-                  alt="Customer" 
-                  className="w-16 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div className="flex-1">
-                  <p className="text-[#1F4F27] text-sm xl:text-base font-poppins leading-relaxed">
-                    Get a fully retina ready site when you build with Startup Framework. Websites look sharper and more gorgeous on devices with retina display support
-                  </p>
-                </div>
-              </div>
-              <div className="mt-auto">
-                <p className="text-black/30 text-sm font-poppins font-bold uppercase tracking-wider">
-                  Rayhan Curran
-                </p>
-              </div>
+    <section className="w-full bg-white py-16 sm:py-20 mt-16 sm:mt-32">
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-start">
+            
+            {/* Left Side - Title */}
+            <div className="lg:col-span-1">
+              <h2 className="text-black text-base sm:text-lg font-light tracking-tight leading-tight mb-4 lg:mb-0">
+                Driven by the numbers
+              </h2>
             </div>
 
-            {/* Review Card 2 */}
-            <div className="bg-white border-2 border-[#707070] rounded-lg p-6 h-80 flex flex-col">
-              <div className="flex items-start gap-4 mb-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
-                  alt="Customer" 
-                  className="w-16 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div className="flex-1">
-                  <p className="text-[#1F4F27] text-sm xl:text-base font-poppins leading-relaxed">
-                    Amazing service and incredibly fast process. Sold my car in just 2 days with no hassle. Highly recommend to anyone looking to sell quickly!
-                  </p>
-                </div>
-              </div>
-              <div className="mt-auto">
-                <p className="text-black/30 text-sm font-poppins font-bold uppercase tracking-wider">
-                  Sarah Johnson
-                </p>
-              </div>
-            </div>
-
-            {/* Review Card 3 */}
-            <div className="bg-white border-2 border-[#707070] rounded-lg p-6 h-80 flex flex-col">
-              <div className="flex items-start gap-4 mb-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
-                  alt="Customer" 
-                  className="w-16 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div className="flex-1">
-                  <p className="text-[#1F4F27] text-sm xl:text-base font-poppins leading-relaxed">
-                    Professional team and transparent pricing. They handled all the paperwork and made the entire selling experience stress-free.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-auto">
-                <p className="text-black/30 text-sm font-poppins font-bold uppercase tracking-wider">
-                  Michael Chen
-                </p>
-              </div>
-            </div>
-
-            {/* Review Card 4 */}
-            <div className="bg-white border-2 border-[#707070] rounded-lg p-6 h-80 flex flex-col">
-              <div className="flex items-start gap-4 mb-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
-                  alt="Customer" 
-                  className="w-16 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div className="flex-1">
-                  <p className="text-[#1F4F27] text-sm xl:text-base font-poppins leading-relaxed">
-                    Got the best price for my car compared to other dealers. The online valuation was accurate and the pickup was convenient.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-auto">
-                <p className="text-black/30 text-sm font-poppins font-bold uppercase tracking-wider">
-                  Emma Davis
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile/Tablet Horizontal Scroll */}
-          <div className="lg:hidden overflow-x-auto pb-4">
-            <div className="flex gap-4 w-max">
-              {/* Review Card 1 Mobile */}
-              <div className="bg-white border-2 border-[#707070] rounded-lg p-4 w-80 sm:w-96 h-64 flex flex-col flex-shrink-0">
-                <div className="flex items-start gap-3 mb-3">
-                  <img 
-                    src="https://images.unsplash.com/photo-1494790108755-2616b9e4fefe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
-                    alt="Customer" 
-                    className="w-12 h-16 object-cover rounded-lg flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <p className="text-[#1F4F27] text-sm font-poppins leading-relaxed">
-                      Get a fully retina ready site when you build with Startup Framework. Websites look sharper and more gorgeous.
-                    </p>
+            {/* Right Side - Stats and Brand Logos */}
+            <div className="lg:col-span-4">
+              
+              {/* Stats */}
+              <div className="flex flex-col sm:flex-row justify-start items-start gap-6 sm:gap-8 lg:gap-16 mb-12 sm:mb-16">
+                <div className="text-left">
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight mb-2">
+                    50,000+
                   </div>
-                </div>
-                <div className="mt-auto">
-                  <p className="text-black/30 text-xs font-poppins font-bold uppercase tracking-wider">
-                    Rayhan Curran
+                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide">
+                    Cars sold
                   </p>
                 </div>
+                
+                <div className="hidden sm:block w-px h-12 sm:h-16 bg-slate-300"></div>
+                
+                <div className="text-left">
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight mb-2">
+                    1991
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide">
+                    In business since
+                  </p>
+                </div>
+                
+                <div className="hidden sm:block w-px h-12 sm:h-16 bg-slate-300"></div>
+
+                <div className="text-left">
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight mb-2">
+                    &lt;1 week
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide">
+                    Done Deal
+                  </p>
+                </div>
+              </div>
+              
+              {/* Brand Logos Grid */}
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 sm:gap-2 items-center justify-items-center sm:justify-items-start">
+                <img 
+                  src="/hyundai-motor-company-2-logo-svgrepo-com.svg" 
+                  alt="Hyundai" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/volkswagen-6-logo-svgrepo-com%20(1).svg" 
+                  alt="Volkswagen" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/kia-svgrepo-com.svg" 
+                  alt="Kia" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/ford-svgrepo-com.svg" 
+                  alt="Ford" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/dodge-svgrepo-com.svg" 
+                  alt="Dodge" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/honda-9-logo-svgrepo-com.svg" 
+                  alt="Honda" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/mercedes-benz-svgrepo-com.svg" 
+                  alt="Mercedes" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/toyota-1-logo-svgrepo-com.svg" 
+                  alt="Toyota" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/lexus-logo-svgrepo-com.svg" 
+                  alt="Lexus" 
+                  className="h-8 sm:h-10 md:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
               </div>
 
-              {/* Review Card 2 Mobile */}
-              <div className="bg-white border-2 border-[#707070] rounded-lg p-4 w-80 sm:w-96 h-64 flex flex-col flex-shrink-0">
-                <div className="flex items-start gap-3 mb-3">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
-                    alt="Customer" 
-                    className="w-12 h-16 object-cover rounded-lg flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <p className="text-[#1F4F27] text-sm font-poppins leading-relaxed">
-                      Amazing service and incredibly fast process. Sold my car in just 2 days with no hassle. Highly recommend!
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-auto">
-                  <p className="text-black/30 text-xs font-poppins font-bold uppercase tracking-wider">
-                    Sarah Johnson
-                  </p>
-                </div>
-              </div>
-
-              {/* Review Card 3 Mobile */}
-              <div className="bg-white border-2 border-[#707070] rounded-lg p-4 w-80 sm:w-96 h-64 flex flex-col flex-shrink-0">
-                <div className="flex items-start gap-3 mb-3">
-                  <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
-                    alt="Customer" 
-                    className="w-12 h-16 object-cover rounded-lg flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <p className="text-[#1F4F27] text-sm font-poppins leading-relaxed">
-                      Professional team and transparent pricing. They handled all the paperwork and made it stress-free.
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-auto">
-                  <p className="text-black/30 text-xs font-poppins font-bold uppercase tracking-wider">
-                    Michael Chen
-                  </p>
-                </div>
-              </div>
-
-              {/* Review Card 4 Mobile */}
-              <div className="bg-white border-2 border-[#707070] rounded-lg p-4 w-80 sm:w-96 h-64 flex flex-col flex-shrink-0">
-                <div className="flex items-start gap-3 mb-3">
-                  <img 
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
-                    alt="Customer" 
-                    className="w-12 h-16 object-cover rounded-lg flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <p className="text-[#1F4F27] text-sm font-poppins leading-relaxed">
-                      Got the best price for my car compared to other dealers. The online valuation was accurate.
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-auto">
-                  <p className="text-black/30 text-xs font-poppins font-bold uppercase tracking-wider">
-                    Emma Davis
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
 
-        {/* Bottom Logo/Brand Element */}
-        <div className="flex justify-center">
-          <div className="w-64 sm:w-80 lg:w-[325px] h-16 sm:h-20 lg:h-[82px] border-2 border-[#328640] rounded-lg flex items-center justify-center bg-gray-50">
-            <span className="text-[#328640] font-poppins text-sm sm:text-base font-medium">Brand Logo</span>
           </div>
         </div>
       </div>

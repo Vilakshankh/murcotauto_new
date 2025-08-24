@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #171717;
 }
 
 @theme inline {
@@ -12,29 +12,95 @@
   --font-mono: var(--font-geist-mono);
   --font-barlow: var(--font-barlow);
   --font-poppins: var(--font-poppins);
+  --font-reddit-mono: 'Reddit Mono', monospace;
+  --font-dm-sans: 'DM Sans', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ffffff;
+  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
   overflow-x: hidden;
-  line-height: 1.5;
 }
 
 html {
   overflow-x: hidden;
 }
 
-/* Swiss Design Typography */
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  letter-spacing: -0.025em;
+/* Base Typography Classes */
+.heading-primary {
+  font-family: var(--font-dm-sans);
+  font-weight: 700;
+  @apply text-slate-900 tracking-tight leading-none;
 }
 
-/* Smooth transitions */
-* {
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+.heading-secondary {
+  font-family: var(--font-dm-sans);
+  font-weight: 700;
+  @apply text-slate-900 tracking-tight;
+}
+
+.text-primary {
+  font-family: var(--font-dm-sans);
+  font-weight: 400;
+  @apply text-slate-600 leading-relaxed;
+}
+
+.text-muted {
+  font-family: var(--font-dm-sans);
+  font-weight: 400;
+  @apply text-slate-400 tracking-wide;
+}
+
+.text-numbers {
+  font-family: var(--font-reddit-mono);
+  font-weight: 400;
+}
+
+/* Dark background variants */
+.heading-primary-dark {
+  font-family: var(--font-dm-sans);
+  font-weight: 700;
+  @apply text-white tracking-tight leading-none;
+}
+
+.heading-secondary-dark {
+  font-family: var(--font-dm-sans);
+  font-weight: 700;
+  @apply text-white tracking-tight;
+}
+
+.text-primary-dark {
+  font-family: var(--font-dm-sans);
+  font-weight: 400;
+  @apply text-gray-300 leading-relaxed;
+}
+
+.text-numbers-dark {
+  font-family: var(--font-reddit-mono);
+  font-weight: 400;
+  @apply text-gray-400;
+}
+
+.btn-primary {
+  font-family: var(--font-dm-sans);
+  font-weight: 500;
+  @apply px-8 py-3 bg-slate-900 text-white text-sm rounded-full hover:bg-slate-800 transition-all tracking-wide shadow-lg;
+}
+
+.btn-primary-light {
+  font-family: var(--font-dm-sans);
+  font-weight: 500;
+  @apply px-8 py-3 bg-white text-slate-900 text-sm rounded-full hover:bg-gray-100 transition-all tracking-wide shadow-lg;
 }
 
 

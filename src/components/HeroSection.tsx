@@ -1,67 +1,31 @@
+import { Zap, Eye, DollarSign } from 'lucide-react';
+
 export default function HeroSection() {
   return (
-    <section className="w-full h-screen bg-white pt-20">
-      <div className="max-w-6xl mx-auto px-8 h-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* Content Side */}
-        <div className="space-y-12">
-          {/* Main Heading */}
-          <div className="space-y-6">
-            <h1 className="text-5xl lg:text-7xl font-mono font-bold text-black leading-none tracking-tight">
-              SELL YOUR<br />
-              CAR
-            </h1>
-            
-            <div className="w-24 h-1 bg-black"></div>
-            
-            <p className="text-lg text-gray-600 font-mono leading-relaxed max-w-md">
-              Fast, transparent, and hassle-free car selling process. Get your quote in minutes.
-            </p>
-          </div>
+    <div className="w-full min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-16 md:pt-20 lg:pt-24">
+      {/* Blurred background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/herobackgroundoriginal.jpg)',
+          filter: 'blur(2px)'
+        }}
+      ></div>
+      {/* Black overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl w-full">
+        {/* Main Hero Content */}
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-black text-white font-mono text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors">
-              Get Quote
-            </button>
-            
-            <button className="px-8 py-4 border border-gray-300 text-black font-mono text-sm uppercase tracking-wide hover:bg-gray-50 transition-colors">
-              Learn Process
-            </button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
-            <div>
-              <div className="text-3xl font-mono font-bold text-black">200K+</div>
-              <div className="text-sm font-mono text-gray-600 uppercase tracking-wide">Cars Sold</div>
-            </div>
-            <div>
-              <div className="text-3xl font-mono font-bold text-black">30Y</div>
-              <div className="text-sm font-mono text-gray-600 uppercase tracking-wide">Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl font-mono font-bold text-black">24H</div>
-              <div className="text-sm font-mono text-gray-600 uppercase tracking-wide">Fast Process</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Image Side */}
-        <div className="hidden lg:block">
-          <div className="aspect-square bg-gray-100 relative overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-              alt="Car" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-8 left-8 bg-white px-6 py-4">
-              <div className="text-sm font-mono text-black uppercase tracking-wide">
-                Professional Valuation
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 className="heading-primary-dark text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 sm:mb-6 leading-tight">
+        Selling your car, made easy
+        </h1>
+        <p className="text-primary-dark text-lg sm:text-xl md:text-2xl lg:text-2xl mb-6 sm:mb-8 leading-relaxed">
+        No hassle, Fair price. Done right.
+        </p>
+        <button className="btn-primary-light text-sm sm:text-base">
+          GET STARTED
+        </button>
       </div>
-    </section>
+      </div>
   );
 }

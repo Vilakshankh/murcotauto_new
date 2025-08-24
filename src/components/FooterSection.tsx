@@ -14,7 +14,7 @@ export default function FooterSection() {
 
               {/* Description */}
               <p className="text-gray-300 font-light leading-relaxed max-w-md text-sm sm:text-base">
-                We've tailored our services to provide the best experience for our customers since day 1.
+                We&apos;ve tailored our services to provide the best experience for our customers since day 1.
               </p>
 
               {/* Newsletter Signup */}

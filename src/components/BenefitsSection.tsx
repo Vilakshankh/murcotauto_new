@@ -78,7 +78,7 @@ export default function BenefitsSection() {
                 <h3 className="text-base sm:text-lg font-light text-black tracking-wide">Fast</h3>
               </div>
               <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
-                "Amazing service and incredibly fast process. Sold my car in just 2 days with no hassle."
+                &quot;Amazing service and incredibly fast process. Sold my car in just 2 days with no hassle.&quot;
               </p>
               <p className="text-xs sm:text-sm text-slate-400 tracking-wide">Sarah Johnson</p>
             </div>
@@ -90,7 +90,7 @@ export default function BenefitsSection() {
                 <h3 className="text-base sm:text-lg font-light text-black tracking-wide">Transparent</h3>
               </div>
               <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
-                "Professional team and transparent pricing. They handled all the paperwork perfectly."
+                &quot;Professional team and transparent pricing. They handled all the paperwork perfectly.&quot;
               </p>
               <p className="text-xs sm:text-sm text-slate-400 tracking-wide">Michael Chen</p>
             </div>
@@ -102,7 +102,7 @@ export default function BenefitsSection() {
                 <h3 className="text-base sm:text-lg font-light text-black tracking-wide">Good price</h3>
               </div>
               <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
-                "Got the best price for my car. The online valuation was accurate and pickup was convenient."
+                &quot;Got the best price for my car. The online valuation was accurate and pickup was convenient.&quot;
               </p>
               <p className="text-xs sm:text-sm text-slate-400 tracking-wide">Emma Davis</p>
             </div>

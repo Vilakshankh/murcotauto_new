@@ -84,7 +84,7 @@ export default function ContactSection() {
                   </h3>                  
                   {/* Description */}
                   <p className="text-slate-600 font-light leading-relaxed text-lg">
-                    Murcot Auto treats you like family — that's why so many trust us to sell their car with ease.
+                    Murcot Auto treats you like family — that&apos;s why so many trust us to sell their car with ease.
                   </p>
 
 

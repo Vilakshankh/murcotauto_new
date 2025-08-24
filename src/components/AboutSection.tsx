@@ -15,7 +15,7 @@ export default function AboutSection() {
             {/* Right Side - Large Condensed Paragraph */}
             <div className="lg:col-span-4">
               <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light leading-tight tracking-tight">
-                Founded in 1991 in the heart of Canada's used car wholesale world, Murcot Auto built strong ties with dealerships, exporters, and buyers nationwide. In the last 10+ years, we expanded to buy directly from the public, helping thousands of sellers get top value without the pressure, trade-in tactics, or wasted time of private sales. Straightforward. Experienced. Trusted since 1991.
+                Founded in 1991 in the heart of Canada&apos;s used car wholesale world, Murcot Auto built strong ties with dealerships, exporters, and buyers nationwide. In the last 10+ years, we expanded to buy directly from the public, helping thousands of sellers get top value without the pressure, trade-in tactics, or wasted time of private sales. Straightforward. Experienced. Trusted since 1991.
               </p>
             </div>
 

@@ -23,7 +23,7 @@ export default function HowItWorksSection() {
                 Tell us about your vehicle
               </h3>
               <p className="text-primary text-sm sm:text-base leading-relaxed">
-                Fill out our quick online form with your vehicle's details. Takes just a minute.
+                Fill out our quick online form with your vehicle&apos;s details. Takes just a minute.
               </p>
             </div>
 
@@ -49,7 +49,7 @@ export default function HowItWorksSection() {
                 Free pickup
               </h3>
               <p className="text-primary text-sm sm:text-base leading-relaxed">
-                We come to you — at home, work, or your dealership if you're trading in.
+                We come to you — at home, work, or your dealership if you&apos;re trading in.
               </p>
             </div>
           </div>

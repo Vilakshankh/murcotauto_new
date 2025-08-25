@@ -2,7 +2,7 @@
 export default function ReviewsSection() {
   return (
     <section className="w-full bg-white py-16 sm:py-20">
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-6 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-start">
             
@@ -18,35 +18,35 @@ export default function ReviewsSection() {
               
               {/* Stats */}
               <div className="flex flex-col sm:flex-row justify-start items-start gap-6 sm:gap-8 lg:gap-16 mb-12 sm:mb-16">
-                <div className="text-left">
-                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight mb-2">
-                    50,000+
-                  </div>
-                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide">
+                <div className="text-center sm:text-left">
+                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide mb-2">
                     Cars sold
                   </p>
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight">
+                    50,000+
+                  </div>
                 </div>
                 
                 <div className="hidden sm:block w-px h-12 sm:h-16 bg-slate-300"></div>
                 
-                <div className="text-left">
-                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight mb-2">
-                    1991
-                  </div>
-                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide">
+                <div className="text-center sm:text-left">
+                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide mb-2">
                     In business since
                   </p>
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight">
+                    1991
+                  </div>
                 </div>
                 
                 <div className="hidden sm:block w-px h-12 sm:h-16 bg-slate-300"></div>
 
-                <div className="text-left">
-                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight mb-2">
-                    &lt;1 week
-                  </div>
-                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide">
+                <div className="text-center sm:text-left">
+                  <p className="text-xs sm:text-sm text-slate-600 font-light tracking-wide mb-2">
                     Done Deal
                   </p>
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-numbers text-black tracking-tight">
+                    &lt;1 week
+                  </div>
                 </div>
               </div>
               

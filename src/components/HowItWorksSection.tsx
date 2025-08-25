@@ -3,7 +3,7 @@ import { Scan, Phone, Mail } from 'lucide-react';
 export default function HowItWorksSection() {
   return (
     <section className="w-full bg-white py-16 sm:py-20">
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-6 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Heading - Centered */}
           <div className="text-center mb-12 sm:mb-16">
@@ -19,7 +19,7 @@ export default function HowItWorksSection() {
               <div className="text-slate-600 text-3xl sm:text-4xl mb-3 sm:mb-4 font-light">
                 01
               </div>
-              <h3 className="heading-secondary text-lg sm:text-xl mb-3 sm:mb-4">
+              <h3 className="heading-secondary text-xl sm:text-2xl mb-3 sm:mb-4">
                 Tell us about your vehicle
               </h3>
               <p className="text-primary text-sm sm:text-base leading-relaxed">
@@ -32,7 +32,7 @@ export default function HowItWorksSection() {
               <div className="text-slate-600 text-3xl sm:text-4xl mb-3 sm:mb-4 font-light">
                 02
               </div>
-              <h3 className="heading-secondary text-lg sm:text-xl mb-3 sm:mb-4">
+              <h3 className="heading-secondary text-xl sm:text-2xl mb-3 sm:mb-4">
                 Get a cash offer fast
               </h3>
               <p className="text-primary text-sm sm:text-base leading-relaxed">
@@ -45,7 +45,7 @@ export default function HowItWorksSection() {
               <div className="text-slate-600 text-3xl sm:text-4xl mb-3 sm:mb-4 font-light">
                 03
               </div>
-              <h3 className="heading-secondary text-lg sm:text-xl mb-3 sm:mb-4">
+              <h3 className="heading-secondary text-xl sm:text-2xl mb-3 sm:mb-4">
                 Free pickup
               </h3>
               <p className="text-primary text-sm sm:text-base leading-relaxed">

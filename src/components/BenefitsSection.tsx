@@ -3,7 +3,7 @@ import { Zap, Shield, CheckCircle, Eye, DollarSign } from 'lucide-react';
 export default function BenefitsSection() {
   return (
     <section className="w-full bg-white py-16 sm:py-20">
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-6 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start mb-12 sm:mb-16">
             
@@ -23,7 +23,7 @@ export default function BenefitsSection() {
                   <Zap className="w-6 sm:w-8 h-6 sm:h-8 text-slate-700 mt-1" />
                 </div>
                 <div>
-                  <h3 className="heading-secondary text-lg sm:text-xl mb-2">Efficient</h3>
+                  <h3 className="heading-secondary text-xl sm:text-2xl mb-2">Efficient</h3>
                   <p className="text-primary text-sm sm:text-base leading-relaxed">
                     Quick and streamlined car selling process. Get your car valued and sold within days, not weeks.
                   </p>
@@ -38,7 +38,7 @@ export default function BenefitsSection() {
                   <Shield className="w-6 sm:w-8 h-6 sm:h-8 text-slate-700 mt-1" />
                 </div>
                 <div>
-                  <h3 className="heading-secondary text-lg sm:text-xl mb-2">Secure</h3>
+                  <h3 className="heading-secondary text-xl sm:text-2xl mb-2">Secure</h3>
                   <p className="text-primary text-sm sm:text-base leading-relaxed">
                     Safe and trusted transactions with verified buyers. All documentation handled professionally and securely.
                   </p>
@@ -53,7 +53,7 @@ export default function BenefitsSection() {
                   <CheckCircle className="w-6 sm:w-8 h-6 sm:h-8 text-slate-700 mt-1" />
                 </div>
                 <div>
-                  <h3 className="heading-secondary text-lg sm:text-xl mb-2">Hassle-free</h3>
+                  <h3 className="heading-secondary text-xl sm:text-2xl mb-2">Hassle-free</h3>
                   <p className="text-primary text-sm sm:text-base leading-relaxed">
                     No paperwork worries or complex procedures. We handle everything from valuation to final transfer.
                   </p>
@@ -75,7 +75,7 @@ export default function BenefitsSection() {
             <div className="p-4 sm:p-6 lg:p-8 text-left border border-black">
               <div className="flex items-center justify-start gap-2 mb-3 sm:mb-4">
                 <Zap className="w-4 sm:w-5 h-4 sm:h-5 text-stone-400" /> 
-                <h3 className="text-base sm:text-lg font-light text-black tracking-wide">Fast</h3>
+                <h3 className="text-lg sm:text-xl font-light text-black tracking-wide">Fast</h3>
               </div>
               <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
                 &quot;Amazing service and incredibly fast process. Sold my car in just 2 days with no hassle.&quot;
@@ -87,7 +87,7 @@ export default function BenefitsSection() {
             <div className="p-4 sm:p-6 lg:p-8 text-left border border-black">
               <div className="flex items-center justify-start gap-2 mb-3 sm:mb-4">
                 <Eye className="w-4 sm:w-5 h-4 sm:h-5 text-stone-400" />
-                <h3 className="text-base sm:text-lg font-light text-black tracking-wide">Transparent</h3>
+                <h3 className="text-lg sm:text-xl font-light text-black tracking-wide">Transparent</h3>
               </div>
               <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
                 &quot;Professional team and transparent pricing. They handled all the paperwork perfectly.&quot;
@@ -99,7 +99,7 @@ export default function BenefitsSection() {
             <div className="p-4 sm:p-6 lg:p-8 text-left border border-black">
               <div className="flex items-center justify-start gap-2 mb-3 sm:mb-4">
                 <DollarSign className="w-4 sm:w-5 h-4 sm:h-5 text-stone-400" />
-                <h3 className="text-base sm:text-lg font-light text-black tracking-wide">Good price</h3>
+                <h3 className="text-lg sm:text-xl font-light text-black tracking-wide">Good price</h3>
               </div>
               <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
                 &quot;Got the best price for my car. The online valuation was accurate and pickup was convenient.&quot;

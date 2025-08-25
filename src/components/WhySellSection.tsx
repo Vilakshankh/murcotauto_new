@@ -16,7 +16,7 @@ export default function WhySellSection() {
         </div>
 
         {/* Right Side - Title, Button, and Benefits List */}
-        <div className="bg-green-700 px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20 min-h-[400px] lg:min-h-[600px] flex flex-col justify-center order-1 lg:order-2">
+        <div className="bg-green-700 px-6 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20 min-h-[400px] lg:min-h-[600px] flex flex-col justify-center order-1 lg:order-2">
           
           {/* Title and Button */}
           <div className="mb-8 sm:mb-12">
@@ -37,7 +37,7 @@ export default function WhySellSection() {
               <Home className="w-6 sm:w-8 h-6 sm:h-8 text-white mt-1" />
             </div>
             <div>
-              <h3 className="heading-secondary-dark text-lg sm:text-xl mb-2">Comfort</h3>
+              <h3 className="heading-secondary-dark text-xl sm:text-2xl mb-2">Comfort</h3>
               <p className="text-primary-dark text-sm sm:text-base leading-relaxed">
                 Sell from the comfort of your home
               </p>
@@ -52,7 +52,7 @@ export default function WhySellSection() {
               <Calculator className="w-6 sm:w-8 h-6 sm:h-8 text-white mt-1" />
             </div>
             <div>
-              <h3 className="heading-secondary-dark text-lg sm:text-xl mb-2">Tax Benefits</h3>
+              <h3 className="heading-secondary-dark text-xl sm:text-2xl mb-2">Tax Benefits</h3>
               <p className="text-primary-dark text-sm sm:text-base leading-relaxed">
                 Save on taxes when purchasing your next vehicle
               </p>
@@ -67,7 +67,7 @@ export default function WhySellSection() {
               <Car className="w-6 sm:w-8 h-6 sm:h-8 text-white mt-1" />
             </div>
             <div>
-              <h3 className="heading-secondary-dark text-lg sm:text-xl mb-2">All Vehicles</h3>
+              <h3 className="heading-secondary-dark text-xl sm:text-2xl mb-2">All Vehicles</h3>
               <p className="text-primary-dark text-sm sm:text-base leading-relaxed">
                 We buy out both financed & leased vehicles
               </p>
@@ -82,7 +82,7 @@ export default function WhySellSection() {
               <Shield className="w-6 sm:w-8 h-6 sm:h-8 text-white mt-1" />
             </div>
             <div>
-              <h3 className="heading-secondary-dark text-lg sm:text-xl mb-2">Security</h3>
+              <h3 className="heading-secondary-dark text-xl sm:text-2xl mb-2">Security</h3>
               <p className="text-primary-dark text-sm sm:text-base leading-relaxed">
                 Safe & worry-free process
               </p>

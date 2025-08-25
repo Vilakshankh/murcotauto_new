@@ -1,14 +1,14 @@
 
 export default function ReviewsSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 mt-16 sm:mt-32">
+    <section className="w-full bg-white py-16 sm:py-20">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-start">
             
             {/* Left Side - Title */}
             <div className="lg:col-span-1">
-              <h2 className="text-black text-base sm:text-lg font-light tracking-tight leading-tight mb-4 lg:mb-0">
+              <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-xl font-light tracking-tight leading-tight mb-4 lg:mb-0">
                 Driven by the numbers
               </h2>
             </div>

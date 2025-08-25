@@ -2,14 +2,14 @@ import { Zap, Shield, CheckCircle, Eye, DollarSign } from 'lucide-react';
 
 export default function BenefitsSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 mt-16 sm:mt-32">
+    <section className="w-full bg-white py-16 sm:py-20">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start mb-12 sm:mb-16">
             
             {/* Left Side - Big Title */}
             <div>
-              <h2 className="heading-secondary text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6 sm:mb-8">
+              <h2 className="heading-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6 sm:mb-8">
                 How selling with Murcot Auto feels
               </h2>
             </div>
@@ -64,8 +64,8 @@ export default function BenefitsSection() {
           </div>
 
           {/* Reviews Section */}
-          <div className="text-left mt-16 sm:mt-24">
-            <h2 className="text-base sm:text-lg font-light text-slate-900 tracking-tight leading-none mb-8 sm:mb-12">
+          <div className="text-left pt-16 sm:pt-24">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-2xl font-light text-slate-900 tracking-tight leading-none mb-8 sm:mb-12">
               What people are saying
             </h2>
           </div>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function WhySellSection() {
   return (
-    <section className="w-full bg-green-700 mt-16 sm:mt-32">
+    <section className="w-full bg-green-700">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
         
         {/* Left Side - Background Image Only */}
@@ -20,7 +20,7 @@ export default function WhySellSection() {
           
           {/* Title and Button */}
           <div className="mb-8 sm:mb-12">
-            <h2 className="heading-primary-dark text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6 sm:mb-8">
+            <h2 className="heading-primary-dark text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6 sm:mb-8">
               What sets Murcot Auto apart
             </h2>
             <Link href="/get-started" className="btn-primary-light">

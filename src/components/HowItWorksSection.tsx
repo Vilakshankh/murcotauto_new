@@ -7,7 +7,7 @@ export default function HowItWorksSection() {
         <div className="max-w-6xl mx-auto">
           {/* Section Heading - Centered */}
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="heading-secondary text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+            <h2 className="heading-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               How it works
             </h2>
           </div>

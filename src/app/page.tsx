@@ -13,12 +13,12 @@ export default function Home() {
     <div className="min-h-screen relative overflow-x-hidden">
       <Navigation />
       <HeroSection />
-      <BenefitsSection />
+      <div id="benefits"><BenefitsSection /></div>
       <WhySellSection />
       <HowItWorksSection />
       <ReviewsSection />
-      <AboutSection />
-      <ContactSection />
+      <div id="about-us"><AboutSection /></div>
+      <div id="contact-us"><ContactSection /></div>
       <FooterSection />
     </div>
   );

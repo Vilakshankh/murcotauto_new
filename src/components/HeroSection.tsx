@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -22,9 +23,9 @@ export default function HeroSection() {
         <p className="text-primary-dark text-lg sm:text-xl md:text-2xl lg:text-2xl mb-6 sm:mb-8 leading-relaxed">
         No hassle, Fair price. Done right.
         </p>
-        <button className="btn-primary-light text-sm sm:text-base">
+        <Link href="/get-started" className="btn-primary-light text-sm sm:text-base">
           GET STARTED
-        </button>
+        </Link>
       </div>
       </div>
   );

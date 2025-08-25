@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function FooterSection() {
   return (
     <footer className="w-full bg-[#1F1F1F] py-12 sm:py-16 lg:py-20">
@@ -75,9 +77,9 @@ export default function FooterSection() {
             {/* CTA and Logo - Right Side */}
             <div className="sm:col-span-2 lg:col-span-2 flex flex-col gap-6 sm:gap-8">
               {/* Ready to Sell Button */}
-              <button className="w-full sm:w-auto px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-slate-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-all tracking-wide shadow-lg">
+              <Link href="/get-started" className="block w-full sm:w-auto px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-slate-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-all tracking-wide shadow-lg text-center">
                 SELL NOW
-              </button>
+              </Link>
 
               {/* Logo */}
               <div className="flex items-center">

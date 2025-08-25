@@ -1,4 +1,5 @@
 import { Home, Calculator, Car, Shield } from 'lucide-react';
+import Link from 'next/link';
 
 export default function WhySellSection() {
   return (
@@ -22,9 +23,9 @@ export default function WhySellSection() {
             <h2 className="heading-primary-dark text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-6 sm:mb-8">
               What sets Murcot Auto apart
             </h2>
-            <button className="btn-primary-light">
+            <Link href="/get-started" className="btn-primary-light">
               GET STARTED
-            </button>
+            </Link>
           </div>
 
           {/* Benefits List */}

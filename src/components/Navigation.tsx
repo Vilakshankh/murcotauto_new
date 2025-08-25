@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,29 +11,37 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/15d58f9be544688799a05f2854ca090e81133604.png" 
-              alt="Murcot Auto" 
-              className="h-7 sm:h-8 md:h-10 lg:h-12 w-auto"
-            />
+            <Link href="/" className="cursor-pointer">
+              <img 
+                src="/15d58f9be544688799a05f2854ca090e81133604.png" 
+                alt="Murcot Auto" 
+                className="h-7 sm:h-8 md:h-10 lg:h-12 w-auto hover:opacity-80 transition-opacity"
+              />
+            </Link>
           </div>
           
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              PROCESS
-            </a>
-            <a href="#" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              ABOUT
-            </a>
-            <a href="#" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              FAQ
-            </a>
+            <Link href="/" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
+              HOME
+            </Link>
+            <Link href="/#about-us" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
+              ABOUT US
+            </Link>
+            <Link href="/#benefits" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
+              BENEFITS
+            </Link>
+            <Link href="/get-started" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
+              HOW IT WORKS
+            </Link>
+            <Link href="/#contact-us" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
+              CONTACT US
+            </Link>
             
             {/* Sell Button */}
-            <button className="px-6 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-all tracking-wide">
+            <Link href="/get-started" className="px-6 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-all tracking-wide">
               SELL NOW
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -53,18 +62,24 @@ export default function Navigation() {
           <div className="fixed inset-0 bg-black/20 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
           <div className="fixed top-16 md:top-20 left-0 right-0 bg-white border-b border-gray-200 shadow-lg">
             <div className="px-4 py-6 space-y-4">
-              <a href="#" className="block text-slate-700 text-lg font-medium hover:text-slate-900 transition-colors py-2">
-                PROCESS
-              </a>
-              <a href="#" className="block text-slate-700 text-lg font-medium hover:text-slate-900 transition-colors py-2">
-                ABOUT
-              </a>
-              <a href="#" className="block text-slate-700 text-lg font-medium hover:text-slate-900 transition-colors py-2">
-                FAQ
-              </a>
-              <button className="w-full mt-4 px-6 py-3 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-all tracking-wide">
+              <Link href="/" className="block text-slate-700 text-lg font-medium hover:text-slate-900 transition-colors py-2">
+                HOME
+              </Link>
+              <Link href="/#about-us" className="block text-slate-700 text-lg font-medium hover:text-slate-900 transition-colors py-2">
+                ABOUT US
+              </Link>
+              <Link href="/#benefits" className="block text-slate-700 text-lg font-medium hover:text-slate-900 transition-colors py-2">
+                BENEFITS
+              </Link>
+              <Link href="/get-started" className="block text-slate-700 text-lg font-medium hover:text-slate-900 transition-colors py-2">
+                HOW IT WORKS
+              </Link>
+              <Link href="/#contact-us" className="block text-slate-700 text-lg font-medium hover:text-slate-900 transition-colors py-2">
+                CONTACT US
+              </Link>
+              <Link href="/get-started" className="block w-full mt-4 px-6 py-3 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-all tracking-wide text-center">
                 SELL NOW
-              </button>
+              </Link>
             </div>
           </div>
         </div>

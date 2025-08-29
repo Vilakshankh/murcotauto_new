@@ -3,30 +3,121 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center relative px-6 sm:px-6 lg:px-8 pt-16 md:pt-20 lg:pt-24">
-      {/* Blurred background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/herobackgroundoriginal.jpg)',
-          filter: 'blur(2px)'
-        }}
-      ></div>
-      {/* Black overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
-      <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl w-full">
-        {/* Main Hero Content */}
-
-        <h1 className="heading-primary-dark text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-4 sm:mb-6 leading-tight">
-        Selling your car, made easy
-        </h1>
-        <p className="text-primary-dark text-xl sm:text-2xl md:text-3xl lg:text-3xl mb-6 sm:mb-8 leading-relaxed">
-        No hassle, Fair price. Done right.
-        </p>
-        <Link href="/get-started" className="btn-primary-light text-sm sm:text-base">
-          GET STARTED
-        </Link>
+    <div style={{
+      width: '100%', 
+      height: '100vh', 
+      marginTop: '64px', // For mobile (h-16)
+      paddingLeft: '24px', 
+      paddingRight: '24px', 
+      paddingTop: '60px', 
+      paddingBottom: '60px', 
+      backgroundImage: 'url(/herobackgroundoriginal.jpg)', 
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      flexDirection: 'column', 
+      justifyContent: 'flex-end', 
+      alignItems: 'flex-start', 
+      gap: '10px', 
+      display: 'inline-flex'
+    }} className="md:mt-20 lg:mt-24">
+      <div style={{
+        width: '482px', 
+        padding: '16px', 
+        background: 'rgba(0, 0, 0, 0.40)', 
+        borderRadius: '19.08px', 
+        flexDirection: 'column', 
+        justifyContent: 'flex-start', 
+        alignItems: 'flex-start', 
+        gap: '16px', 
+        display: 'flex'
+      }}>
+        <div style={{
+          alignSelf: 'stretch', 
+          color: 'white', 
+          fontSize: '41.63px', 
+          fontFamily: 'Barlow', 
+          fontWeight: '800', 
+          lineHeight: '49.73px', 
+          wordWrap: 'break-word'
+        }}>
+          Selling your car, <br/>made easy!
+        </div>
+        <div style={{
+          alignSelf: 'stretch', 
+          color: 'white', 
+          fontSize: '16px', 
+          fontFamily: 'Poppins', 
+          fontWeight: '400', 
+          lineHeight: '21px', 
+          wordWrap: 'break-word'
+        }}>
+          Ready to sell your car? Get a fast, no-obligation quote from Murcot Auto in just minutes. Whether it's financed, leased, or needs a little work — we make it easy.
+        </div>
+        <div style={{
+          justifyContent: 'flex-start', 
+          alignItems: 'center', 
+          gap: '24px', 
+          display: 'inline-flex'
+        }}>
+          <Link href="/get-started" style={{
+            paddingLeft: '16px', 
+            paddingRight: '16px', 
+            paddingTop: '8px', 
+            paddingBottom: '8px', 
+            background: 'white', 
+            borderRadius: '57.83px', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            gap: '10px', 
+            display: 'flex',
+            textDecoration: 'none'
+          }}>
+            <div style={{
+              textAlign: 'center', 
+              justifyContent: 'center', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              color: '#33853F', 
+              fontSize: '20px', 
+              fontFamily: 'Poppins', 
+              fontWeight: '500', 
+              lineHeight: '26px', 
+              wordWrap: 'break-word'
+            }}>
+              Get Started
+            </div>
+          </Link>
+          <div style={{
+            paddingLeft: '16px', 
+            paddingRight: '16px', 
+            paddingTop: '8px', 
+            paddingBottom: '8px', 
+            borderRadius: '57.83px', 
+            outline: '2px white solid', 
+            outlineOffset: '-2px', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            gap: '10px', 
+            display: 'flex'
+          }}>
+            <div style={{
+              textAlign: 'center', 
+              justifyContent: 'center', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              color: 'white', 
+              fontSize: '20px', 
+              fontFamily: 'Poppins', 
+              fontWeight: '500', 
+              lineHeight: '26px', 
+              wordWrap: 'break-word'
+            }}>
+              Learn More
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
+    </div>
   );
 }

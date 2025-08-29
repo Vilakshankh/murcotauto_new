@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-[#1F1F1F] py-12 sm:py-16 lg:py-20">
+    <footer className="w-full bg-green-700 py-12 sm:py-16 lg:py-20">
       <div className="px-6 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -24,7 +24,7 @@ export default function FooterSection() {
                 <input 
                   type="email" 
                   placeholder="Your email"
-                  className="flex-1 w-full sm:max-w-[250px] h-12 sm:h-10 px-4 rounded-full border border-gray-600 bg-transparent text-white text-base sm:text-sm font-light placeholder-gray-400 focus:border-gray-400 focus:outline-none"
+                  className="flex-1 w-full sm:max-w-[250px] h-12 sm:h-10 px-4 rounded-full border border-white bg-transparent text-white text-base sm:text-sm font-light placeholder-white focus:border-gray-400 focus:outline-none"
                 />
                 <button className="w-full sm:w-auto px-6 h-12 sm:h-10 bg-white text-slate-900 rounded-full hover:bg-gray-100 transition-colors">
                   <span className="text-sm font-medium tracking-wide">

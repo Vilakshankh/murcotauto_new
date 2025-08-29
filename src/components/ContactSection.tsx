@@ -7,7 +7,7 @@ export default function ContactSection() {
             
             {/* Left Side - Title */}
             <div className="lg:col-span-1">
-              <h2 className="text-black text-2xl sm:text-3xl md:text-4xl lg:text-xl font-light tracking-tight leading-tight mb-4 lg:mb-0">
+              <h2 className="text-green-700 text-2xl sm:text-3xl md:text-4xl lg:text-xl font-extrabold font-['Barlow'] tracking-tight leading-tight mb-4 lg:mb-0">
                 Contact us
               </h2>
             </div>
@@ -20,7 +20,7 @@ export default function ContactSection() {
                 <div className="space-y-6">
                   {/* Form Heading */}
                   <div className="mb-6">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-slate-900 tracking-tight leading-tight mb-3">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-['Barlow'] text-green-700 tracking-tight leading-tight mb-3">
                       Drop Us a Line
                     </h3>
                     <p className="text-slate-600 font-light leading-relaxed">
@@ -79,7 +79,7 @@ export default function ContactSection() {
                 {/* Contact Information */}
                 <div className="space-y-6">
                   {/* Get in Touch Heading */}
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-slate-900 tracking-tight leading-tight">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-['Barlow'] text-green-700 tracking-tight leading-tight">
                     Get in Touch
                   </h3>                  
                   {/* Description */}
@@ -120,7 +120,7 @@ export default function ContactSection() {
                   <div className="w-full h-px bg-gray-200 my-6"></div>
 
                   {/* Social Media Section */}
-                  <h4 className="text-xl font-light text-slate-900 tracking-tight">
+                  <h4 className="text-xl font-extrabold font-['Barlow'] text-green-700 tracking-tight">
                     Follow Us
                   </h4>
 

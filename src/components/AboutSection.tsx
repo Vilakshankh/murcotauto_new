@@ -1,27 +1,21 @@
 export default function AboutSection() {
   return (
-    <section className="w-full bg-green-700 py-16 sm:py-20">
-      <div className="px-6 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-start">
-            
-            {/* Left Side - Small About Us Label */}
-            <div className="lg:col-span-1">
-              <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-xl font-light tracking-tight leading-tight mb-4 lg:mb-0">
-                About us
-              </h2>
-            </div>
-
-            {/* Right Side - Large Condensed Paragraph */}
-            <div className="lg:col-span-4">
-              <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light leading-tight tracking-tight">
-                Founded in 1991 in the heart of Canada&apos;s used car wholesale world, Murcot Auto built strong ties with dealerships, exporters, and buyers nationwide. In the last 10+ years, we expanded to buy directly from the public, helping thousands of sellers get top value without the pressure, trade-in tactics, or wasted time of private sales. Straightforward. Experienced. Trusted since 1991.
-              </p>
-            </div>
-
+    <section className="w-full">
+      <div className="w-full flex justify-start items-center">
+        <div className="flex-1 self-stretch p-14 bg-green-700 flex flex-col justify-center items-center gap-4">
+          <div className="self-stretch justify-start text-white text-5xl font-extrabold font-['Barlow'] leading-10">About Us</div>
+          <div className="self-stretch justify-start">
+            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">
+              Murcot Auto was founded in 1993, starting in the heart of the used car wholesale world — buying and selling vehicles through auctions and between dealers across Canada. Over time, we built strong ties with dealerships, exporters, and buyers, becoming a trusted name nationwide.<br/><br/>In the last 10+ years, we expanded to buy directly from the public, helping thousands of sellers get top value without the pressure, trade-in tactics, or wasted time of private sales.<br/><br/>
+            </span>
+            <span className="text-white text-xl font-bold font-['Poppins'] leading-loose">Straightforward. Experienced. Trusted since 1993.</span>
           </div>
         </div>
+        <img className="w-[552.55px] self-stretch object-cover" src="/aboutus.jpg" alt="About Murcot Auto" />
       </div>
+      
+      {/* Map Image */}
+      <img className="w-full h-72 object-cover" src="/map.png" alt="Murcot Auto Location Map" />
     </section>
   );
 }

@@ -1,111 +1,51 @@
-import { Zap, Shield, CheckCircle, Eye, DollarSign } from 'lucide-react';
-
 export default function BenefitsSection() {
   return (
     <section className="w-full bg-white py-16 sm:py-20">
       <div className="px-6 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start mb-12 sm:mb-16">
-            
-            {/* Left Side - Big Title */}
-            <div>
-              <h2 className="heading-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6 sm:mb-8">
-                How selling with Murcot Auto feels
-              </h2>
+        <div className="w-full">
+          <div className="flex justify-center items-center gap-9">
+            <div className="w-80 p-14 bg-white rounded-[10px] outline outline-2 outline-offset-[-2px] outline-green-700 inline-flex flex-col justify-center items-center gap-6">
+              <img 
+                src="/efficient-v2.png" 
+                alt="Efficient car selling process" 
+                className="w-64 h-56 object-contain"
+              />
+              <div className="self-stretch flex flex-col justify-start items-start gap-4">
+                <div className="self-stretch text-center justify-start text-green-700 text-xl font-extrabold font-['Barlow'] leading-normal">Efficient</div>
+                <div className="self-stretch text-center justify-start text-gray-500 text-base font-normal font-['Poppins'] leading-tight">Get a firm offer in minutes and complete the sale quickly — no long waits, no drawn-out negotiations.</div>
+              </div>
             </div>
-
-            {/* Right Side - Benefits List */}
-            <div className="space-y-6 sm:space-y-8">
-              
-              {/* Efficient */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <Zap className="w-6 sm:w-8 h-6 sm:h-8 text-slate-700 mt-1" />
-                </div>
-                <div>
-                  <h3 className="heading-secondary text-xl sm:text-2xl mb-2">Efficient</h3>
-                  <p className="text-primary text-sm sm:text-base leading-relaxed">
-                    Quick and streamlined car selling process. Get your car valued and sold within days, not weeks.
-                  </p>
-                </div>
+            <div className="w-80 p-14 bg-white rounded-[10px] outline outline-2 outline-offset-[-2px] outline-green-700 inline-flex flex-col justify-center items-center gap-6">
+              <img 
+                src="/secure-v2.svg" 
+                alt="Secure car selling process" 
+                className="w-60 h-56 object-contain"
+              />
+              <div className="self-stretch flex flex-col justify-start items-start gap-4">
+                <div className="self-stretch text-center justify-start text-green-700 text-xl font-extrabold font-['Barlow'] leading-normal">Secure</div>
+                <div className="self-stretch text-center justify-start text-slate-900/40 text-base font-normal font-['Poppins'] leading-tight">Get paid safely with no risk — no dealing with strangers or unreliable payment methods. We handle everything, including paperwork and loan payoffs. You just hand us the keys!</div>
               </div>
-              
-              <hr className="border-slate-200" />
-
-              {/* Secure */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <Shield className="w-6 sm:w-8 h-6 sm:h-8 text-slate-700 mt-1" />
-                </div>
-                <div>
-                  <h3 className="heading-secondary text-xl sm:text-2xl mb-2">Secure</h3>
-                  <p className="text-primary text-sm sm:text-base leading-relaxed">
-                    Safe and trusted transactions with verified buyers. All documentation handled professionally and securely.
-                  </p>
-                </div>
-              </div>
-              
-              <hr className="border-slate-200" />
-
-              {/* Hassle-free */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="flex-shrink-0">
-                  <CheckCircle className="w-6 sm:w-8 h-6 sm:h-8 text-slate-700 mt-1" />
-                </div>
-                <div>
-                  <h3 className="heading-secondary text-xl sm:text-2xl mb-2">Hassle-free</h3>
-                  <p className="text-primary text-sm sm:text-base leading-relaxed">
-                    No paperwork worries or complex procedures. We handle everything from valuation to final transfer.
-                  </p>
-                </div>
-              </div>
-
             </div>
-          </div>
-
-          {/* Reviews Section */}
-          <div className="text-left pt-16 sm:pt-24">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-2xl font-light text-slate-900 tracking-tight leading-none mb-8 sm:mb-12">
-              What people are saying
-            </h2>
+            <div className="w-80 p-14 bg-white rounded-[10px] outline outline-2 outline-offset-[-2px] outline-green-700 inline-flex flex-col justify-center items-center gap-6">
+              <img 
+                src="/hasslefree-v2.svg" 
+                alt="Hassle-free car selling process" 
+                className="w-60 h-56 object-contain"
+              />
+              <div className="self-stretch flex flex-col justify-start items-start gap-4">
+                <div className="self-stretch text-center justify-start text-green-700 text-xl font-extrabold font-['Barlow'] leading-normal">Hassle-Free</div>
+                <div className="self-stretch text-center justify-start text-slate-900/40 text-base font-normal font-['Poppins'] leading-tight">We come to you, pick up the vehicle, and take care of everything — no stress, no pressure.</div>
+              </div>
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Review Card 1 */}
-            <div className="p-4 sm:p-6 lg:p-8 text-left border border-black">
-              <div className="flex items-center justify-start gap-2 mb-3 sm:mb-4">
-                <Zap className="w-4 sm:w-5 h-4 sm:h-5 text-stone-400" /> 
-                <h3 className="text-lg sm:text-xl font-light text-black tracking-wide">Fast</h3>
-              </div>
-              <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
-                &quot;Amazing service and incredibly fast process. Sold my car in just 2 days with no hassle.&quot;
-              </p>
-              <p className="text-xs sm:text-sm text-slate-400 tracking-wide">Sarah Johnson</p>
-            </div>
-
-            {/* Review Card 2 */}
-            <div className="p-4 sm:p-6 lg:p-8 text-left border border-black">
-              <div className="flex items-center justify-start gap-2 mb-3 sm:mb-4">
-                <Eye className="w-4 sm:w-5 h-4 sm:h-5 text-stone-400" />
-                <h3 className="text-lg sm:text-xl font-light text-black tracking-wide">Transparent</h3>
-              </div>
-              <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
-                &quot;Professional team and transparent pricing. They handled all the paperwork perfectly.&quot;
-              </p>
-              <p className="text-xs sm:text-sm text-slate-400 tracking-wide">Michael Chen</p>
-            </div>
-
-            {/* Review Card 3 */}
-            <div className="p-4 sm:p-6 lg:p-8 text-left border border-black">
-              <div className="flex items-center justify-start gap-2 mb-3 sm:mb-4">
-                <DollarSign className="w-4 sm:w-5 h-4 sm:h-5 text-stone-400" />
-                <h3 className="text-lg sm:text-xl font-light text-black tracking-wide">Good price</h3>
-              </div>
-              <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed mb-4 sm:mb-6">
-                &quot;Got the best price for my car. The online valuation was accurate and pickup was convenient.&quot;
-              </p>
-              <p className="text-xs sm:text-sm text-slate-400 tracking-wide">Emma Davis</p>
-            </div>
+          {/* Murcot Auto Logo */}
+          <div className="mt-16 sm:mt-20">
+            <img 
+              src="/MA_LOGO.png" 
+              alt="Murcot Auto" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>

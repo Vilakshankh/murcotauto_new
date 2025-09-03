@@ -1,7 +1,7 @@
 
 export default function ReviewsSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20">
+    <section className="w-full bg-white pb-16">
       <div className="px-6 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Reviews Section */}

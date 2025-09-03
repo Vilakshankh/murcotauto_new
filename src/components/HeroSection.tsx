@@ -10,19 +10,16 @@ export default function HeroSection() {
       paddingLeft: '24px', 
       paddingRight: '24px', 
       paddingTop: '60px', 
-      paddingBottom: '60px', 
+      paddingBottom: '20px', 
       backgroundImage: 'url(/herobackgroundoriginal.jpg)', 
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       flexDirection: 'column', 
       justifyContent: 'flex-end', 
-      alignItems: 'flex-start', 
       gap: '10px', 
       display: 'inline-flex'
-    }} className="md:mt-20 lg:mt-24">
-      <div style={{
-        width: '482px', 
+    }} className="md:mt-20 lg:mt-24 items-center md:items-start bg-center">
+      <div className="w-full max-w-md md:max-w-none md:w-[482px] mx-4 md:mx-0" style={{
         padding: '16px', 
         background: 'rgba(0, 0, 0, 0.40)', 
         borderRadius: '19.08px', 

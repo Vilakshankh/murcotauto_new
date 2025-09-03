@@ -5,12 +5,7 @@ export default function ContactSection() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-start">
             
-            {/* Left Side - Title */}
-            <div className="lg:col-span-1">
-              <h2 className="text-green-700 text-2xl sm:text-3xl md:text-4xl lg:text-xl font-extrabold font-['Barlow'] tracking-tight leading-tight mb-4 lg:mb-0">
-                Contact us
-              </h2>
-            </div>
+          
 
             {/* Right Side - Form and Contact Info */}
             <div className="lg:col-span-4">
@@ -20,7 +15,7 @@ export default function ContactSection() {
                 <div className="space-y-6">
                   {/* Form Heading */}
                   <div className="mb-6">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-['Barlow'] text-green-700 tracking-tight leading-tight mb-3">
+                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-['Barlow'] text-green-700 tracking-tight leading-tight mb-3">
                       Drop Us a Line
                     </h3>
                     <p className="text-slate-600 font-light leading-relaxed">
@@ -69,9 +64,10 @@ export default function ContactSection() {
                     {/* Send Button */}
                     <button 
                       type="submit"
-                      className="px-8 py-3 bg-slate-900 text-white text-sm font-medium rounded-full hover:bg-slate-800 transition-all tracking-wide shadow-lg"
+                      className="w-24 h-12 relative flex items-center justify-center"
                     >
-                      Send
+                      <div className="w-24 h-12 left-0 top-0 absolute bg-gradient-to-b from-green-700 to-green-600 rounded-[100px]" />
+                      <div className="relative z-10 text-center text-white text-xl font-medium font-['Poppins'] leading-relaxed">Send</div>
                     </button>
                   </form>
                 </div>
@@ -79,7 +75,7 @@ export default function ContactSection() {
                 {/* Contact Information */}
                 <div className="space-y-6">
                   {/* Get in Touch Heading */}
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-['Barlow'] text-green-700 tracking-tight leading-tight">
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-['Barlow'] text-green-700 tracking-tight leading-tight">
                     Get in Touch
                   </h3>                  
                   {/* Description */}
@@ -120,7 +116,7 @@ export default function ContactSection() {
                   <div className="w-full h-px bg-gray-200 my-6"></div>
 
                   {/* Social Media Section */}
-                  <h4 className="text-xl font-extrabold font-['Barlow'] text-green-700 tracking-tight">
+                  <h4 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-['Barlow'] text-green-700 tracking-tight">
                     Follow Us
                   </h4>
 

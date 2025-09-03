@@ -49,7 +49,7 @@ export default function HeroSection() {
           lineHeight: '21px', 
           wordWrap: 'break-word'
         }}>
-          Ready to sell your car? Get a fast, no-obligation quote from Murcot Auto in just minutes. Whether it's financed, leased, or needs a little work — we make it easy.
+          Ready to sell your car? Get a fast, no-obligation quote from Murcot Auto in just minutes. Whether it&apos;s financed, leased, or needs a little work — we make it easy.
         </div>
         <div style={{
           justifyContent: 'flex-start', 

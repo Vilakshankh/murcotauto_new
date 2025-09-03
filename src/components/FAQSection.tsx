@@ -21,7 +21,7 @@ export default function FAQSection() {
                 <div className="flex flex-col gap-2">
                   <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">How does the selling process work?</div>
                   <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">
-                    It's simple:<br/><br/>
+                    It&apos;s simple:<br/><br/>
                     • Submit your vehicle details<br/>
                     • Get your cash offer — usually within the hour<br/>
                     • We come to you, pick it up, and pay you directly<br/><br/>
@@ -29,10 +29,10 @@ export default function FAQSection() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">Can you help if I'm buying a new car from a dealership?</div>
+                  <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">Can you help if I&apos;m buying a new car from a dealership?</div>
                   <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">
                     Yes — absolutely.<br/>
-                    We offer accommodation (or "convenience") sales at most dealerships. This means:<br/><br/>
+                    We offer accommodation (or &quot;convenience&quot;) sales at most dealerships. This means:<br/><br/>
                     • You keep your tax savings like a trade-in<br/>
                     • We buy your old vehicle and deliver payment directly at the dealership<br/>
                     • You get the best of both worlds: our higher offer plus your full tax credit<br/><br/>
@@ -41,7 +41,7 @@ export default function FAQSection() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">How fast can I sell my car?</div>
-                  <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">Most customers complete their sale in 24–48 hours, and often the same day if you're ready.</div>
+                  <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">Most customers complete their sale in 24–48 hours, and often the same day if you&apos;re ready.</div>
                 </div>
               </div>
             </AccordionContent>
@@ -59,7 +59,7 @@ export default function FAQSection() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">Can you pay off my loan or lease?</div>
-                  <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">Yes.<br/>We deal directly with your lender, pay off the balance, and pay you the difference. You don't have to coordinate anything — we handle it all.</div>
+                  <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">Yes.<br/>We deal directly with your lender, pay off the balance, and pay you the difference. You don&apos;t have to coordinate anything — we handle it all.</div>
                 </div>
               </div>
             </AccordionContent>
@@ -86,7 +86,7 @@ export default function FAQSection() {
                 <div className="flex flex-col gap-2">
                   <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">Do you buy leased, financed, or damaged vehicles?</div>
                   <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">
-                    Yes — we buy most cars, SUVs, and trucks, even if they're:<br/><br/>
+                    Yes — we buy most cars, SUVs, and trucks, even if they&apos;re:<br/><br/>
                     • Still financed<br/>
                     • Leased<br/>
                     • Scratched, dented, or higher mileage
@@ -94,7 +94,7 @@ export default function FAQSection() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">Do I need to safety or inspect my vehicle before selling?</div>
-                  <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">Not at all.<br/>We buy vehicles as-is. You don't need to fix or inspect anything.</div>
+                  <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">Not at all.<br/>We buy vehicles as-is. You don&apos;t need to fix or inspect anything.</div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">Where do you operate?</div>
@@ -117,7 +117,7 @@ export default function FAQSection() {
               <div className="flex flex-col gap-2">
                 <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">What happens to my vehicle after I sell it?</div>
                 <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">
-                  We don't just sell locally.<br/>
+                  We don&apos;t just sell locally.<br/>
                   Murcot Auto moves vehicles through a wholesale network across Canada and the U.S. — getting your vehicle in front of the strongest-paying buyer, not just the closest one.
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function FAQSection() {
                 <div className="flex flex-col gap-2">
                   <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">Why is your offer often higher than a dealership trade-in?</div>
                   <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">
-                    We don't sell to just one person — we source and sell to:<br/><br/>
+                    We don&apos;t sell to just one person — we source and sell to:<br/><br/>
                     • U.S. buyers<br/>
                     • Canadian dealers<br/>
                     • Franchise groups across the country<br/><br/>
@@ -148,13 +148,13 @@ export default function FAQSection() {
                     • Evaluate trade-ins<br/>
                     • Move inventory<br/>
                     • Get real-time pricing guidance<br/><br/>
-                    In fact, many sell their own trade-ins directly to us. We've been doing this since 1993.
+                    In fact, many sell their own trade-ins directly to us. We&apos;ve been doing this since 1993.
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="text-slate-700 text-base font-semibold font-['Poppins'] leading-tight">Can wholesale pricing really beat private sale or retail?</div>
                   <div className="text-slate-700 text-base font-normal font-['Poppins'] leading-tight">
-                    Yes — especially in today's market.<br/>
+                    Yes — especially in today&apos;s market.<br/>
                     Vehicles with strong demand in the U.S., trucks, low-km units, or hard-to-find trims can often sell above local retail in the right network.<br/>
                     And we know exactly where to send them.
                   </div>

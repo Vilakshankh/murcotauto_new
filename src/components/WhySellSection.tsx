@@ -19,7 +19,7 @@ export default function WhySellSection() {
             <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">Trusted by Sellers Since 1993<br/></span>
             <span className="text-white text-base font-normal font-['Poppins'] leading-tight">Over 30 years of proven experience in vehicle buying.<br/></span>
             <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">Serving All of Quebec and Ontario<br/></span>
-            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">We're local, and we're everywhere you need us to be.</span>
+            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">We&apos;re local, and we&apos;re everywhere you need us to be.</span>
           </div>
           <div className="self-stretch flex justify-start items-center">
             <Link href="/get-started" className="px-4 py-2 bg-white rounded-[57.83px] flex justify-center items-center gap-2.5">
@@ -47,7 +47,7 @@ export default function WhySellSection() {
             <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">Trusted by Sellers Since 1993<br/></span>
             <span className="text-white text-base font-normal font-['Poppins'] leading-tight">Over 30 years of proven experience in vehicle buying.<br/></span>
             <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">Serving All of Quebec and Ontario<br/></span>
-            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">We're local, and we're everywhere you need us to be.</span>
+            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">We&apos;re local, and we&apos;re everywhere you need us to be.</span>
           </div>
           <div className="self-stretch flex justify-start items-center">
             <Link href="/get-started" className="px-4 py-2 bg-white rounded-[57.83px] flex justify-center items-center gap-2.5">

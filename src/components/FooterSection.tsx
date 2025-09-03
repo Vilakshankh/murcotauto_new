@@ -11,7 +11,7 @@ export default function FooterSection() {
             200,000 <br/>satisfied customers <br/>since 1993
           </div>
           <div className="w-80 text-center justify-start text-white text-base font-normal font-['Poppins'] leading-snug">
-            We've tailored our services to provide the best experience for our customers since day 1.
+            We&apos;ve tailored our services to provide the best experience for our customers since day 1.
           </div>
           <Input
             type="email"

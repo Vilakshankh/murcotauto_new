@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input"
 export default function VehicleIntakeSection() {
   const form = useForm()
 
-  function onSubmit(values: any) {
+  function onSubmit(values: Record<string, unknown>) {
     console.log(values)
   }
 

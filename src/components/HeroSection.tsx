@@ -14,11 +14,12 @@ export default function HeroSection() {
       backgroundImage: 'url(/herobackgroundoriginal.jpg)', 
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right 32% center', // Mobile: slightly to the right
       flexDirection: 'column', 
       justifyContent: 'flex-end', 
       gap: '10px', 
       display: 'inline-flex'
-    }} className="md:mt-20 lg:mt-24 items-center md:items-start bg-center">
+    }} className="md:mt-20 lg:mt-24 items-center md:items-start md:bg-right">
       <div className="w-full max-w-md md:max-w-none md:w-[482px] mx-4 md:mx-0" style={{
         padding: '16px', 
         background: 'rgba(0, 0, 0, 0.40)', 

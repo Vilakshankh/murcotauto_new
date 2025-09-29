@@ -1,4 +1,54 @@
+"use client"
+
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { Loader2 } from "lucide-react"
+
+interface ContactFormData {
+  email: string;
+  name: string;
+  message: string;
+}
+
 export default function ContactSection() {
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>({
+    defaultValues: {
+      email: '',
+      name: '',
+      message: ''
+    }
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
+
+  async function onSubmit(values: ContactFormData) {
+    setIsSubmitting(true)
+    setSubmitMessage(null)
+    
+    try {
+      const response = await fetch('/api/submit-contact-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitMessage({ type: 'success', text: 'Thank you! Your message has been sent successfully. We\'ll get back to you soon!' })
+        reset()
+      } else {
+        setSubmitMessage({ type: 'error', text: data.error || 'Failed to send message. Please try again.' })
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitMessage({ type: 'error', text: 'Network error. Please check your connection and try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <section className="w-full bg-white py-16 sm:py-20">
       <div className="px-6 sm:px-6 lg:px-8">
@@ -23,51 +73,114 @@ export default function ContactSection() {
                     </p>
                   </div>
 
+                  {/* Success/Error Message */}
+                  {submitMessage && (
+                    <div className={`p-4 rounded-lg text-sm font-medium mb-6 ${
+                      submitMessage.type === 'success' 
+                        ? 'bg-green-100 text-green-800 border border-green-200' 
+                        : 'bg-red-100 text-red-800 border border-red-200'
+                    }`}>
+                      {submitMessage.text}
+                    </div>
+                  )}
+
                   {/* Form Fields */}
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     {/* Email Input */}
                     <div>
                       <label className="block text-slate-900 text-sm font-light tracking-wide mb-2">
-                        Email
+                        Email *
                       </label>
                       <input 
                         type="email" 
                         placeholder="Your email" 
-                        className="w-full h-12 px-4 rounded-lg border border-gray-300 text-slate-900 text-sm font-light placeholder-slate-400 focus:border-slate-600 focus:outline-none"
+                        {...register("email", { 
+                          required: "Email is required",
+                          pattern: {
+                            value: /^\S+@\S+$/i,
+                            message: "Please enter a valid email address"
+                          }
+                        })}
+                        className={`w-full h-12 px-4 rounded-lg border text-slate-900 text-sm font-light placeholder-slate-400 focus:outline-none ${
+                          errors.email 
+                            ? 'border-red-300 focus:border-red-500' 
+                            : 'border-gray-300 focus:border-slate-600'
+                        }`}
                       />
+                      {errors.email && (
+                        <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                      )}
                     </div>
 
                     {/* Name Input */}
                     <div>
                       <label className="block text-slate-900 text-sm font-light tracking-wide mb-2">
-                        Name
+                        Name *
                       </label>
                       <input 
                         type="text" 
                         placeholder="Your name" 
-                        className="w-full h-12 px-4 rounded-lg border border-gray-300 text-slate-900 text-sm font-light placeholder-slate-400 focus:border-slate-600 focus:outline-none"
+                        {...register("name", { 
+                          required: "Name is required",
+                          minLength: {
+                            value: 2,
+                            message: "Name must be at least 2 characters"
+                          }
+                        })}
+                        className={`w-full h-12 px-4 rounded-lg border text-slate-900 text-sm font-light placeholder-slate-400 focus:outline-none ${
+                          errors.name 
+                            ? 'border-red-300 focus:border-red-500' 
+                            : 'border-gray-300 focus:border-slate-600'
+                        }`}
                       />
+                      {errors.name && (
+                        <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+                      )}
                     </div>
 
                     {/* Message Textarea */}
                     <div>
                       <label className="block text-slate-900 text-sm font-light tracking-wide mb-2">
-                        Message
+                        Message *
                       </label>
                       <textarea 
                         placeholder="Drop us a line"
                         rows={6}
-                        className="w-full p-4 rounded-lg border border-gray-300 text-slate-900 text-sm font-light placeholder-slate-400 focus:border-slate-600 focus:outline-none resize-none"
+                        {...register("message", { 
+                          required: "Message is required",
+                          minLength: {
+                            value: 10,
+                            message: "Message must be at least 10 characters"
+                          }
+                        })}
+                        className={`w-full p-4 rounded-lg border text-slate-900 text-sm font-light placeholder-slate-400 focus:outline-none resize-none ${
+                          errors.message 
+                            ? 'border-red-300 focus:border-red-500' 
+                            : 'border-gray-300 focus:border-slate-600'
+                        }`}
                       ></textarea>
+                      {errors.message && (
+                        <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
+                      )}
                     </div>
 
                     {/* Send Button */}
                     <button 
                       type="submit"
-                      className="w-24 h-12 relative flex items-center justify-center"
+                      disabled={isSubmitting}
+                      className="w-32 h-12 relative flex items-center justify-center disabled:opacity-50"
                     >
-                      <div className="w-24 h-12 left-0 top-0 absolute bg-gradient-to-b from-green-700 to-green-600 rounded-[100px]" />
-                      <div className="relative z-10 text-center text-white text-xl font-medium font-['Poppins'] leading-relaxed">Send</div>
+                      <div className="w-full h-12 left-0 top-0 absolute bg-gradient-to-b from-green-700 to-green-600 rounded-[100px]" />
+                      <div className="relative z-10 text-center text-white text-lg font-medium font-['Poppins'] leading-relaxed flex items-center gap-2">
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            Sending...
+                          </>
+                        ) : (
+                          'Send'
+                        )}
+                      </div>
                     </button>
                   </form>
                 </div>

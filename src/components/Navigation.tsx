@@ -32,10 +32,13 @@ export default function Navigation() {
             <Link href="/#benefits" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
               BENEFITS
             </Link>
-            <Link href="/get-started" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
+            <Link href="/get-started#how-it-works" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
               HOW IT WORKS
             </Link>
-            <Link href="/#contact-us" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
+            <Link href="/blog" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
+              BLOG
+            </Link>
+            <Link href="/get-started#contact" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
               CONTACT US
             </Link>
             
@@ -99,7 +102,7 @@ export default function Navigation() {
               </Link>
               
               <Link 
-                href="/get-started" 
+                href="/get-started#how-it-works" 
                 className="self-stretch text-center justify-center text-slate-700 text-xl font-medium font-['Poppins'] leading-relaxed hover:text-slate-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -122,9 +125,13 @@ export default function Navigation() {
                 FAQs
               </Link>
               
-              <div className="self-stretch text-center justify-center text-slate-700 text-xl font-medium font-['Poppins'] leading-relaxed">
+              <Link 
+                href="/blog" 
+                className="self-stretch text-center justify-center text-slate-700 text-xl font-medium font-['Poppins'] leading-relaxed hover:text-slate-900 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Blog
-              </div>
+              </Link>
               
               <div className="inline-flex justify-center items-center gap-6">
                 <button className="text-green-700 hover:text-green-600 transition-colors cursor-pointer">

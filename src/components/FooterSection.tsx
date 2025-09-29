@@ -28,8 +28,8 @@ export default function FooterSection() {
           <div className="flex flex-col gap-2 items-center">
             <div className="text-white text-lg font-medium font-['Poppins'] leading-relaxed">About</div>
             <div className="flex flex-col gap-1 items-center">
-              <div className="text-white text-base font-normal font-['Poppins'] leading-relaxed">Benefits</div>
-              <div className="text-white text-base font-normal font-['Poppins'] leading-relaxed">Contact</div>
+              <Link href="/#benefits" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">Benefits</Link>
+              <Link href="/get-started#contact" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">Contact</Link>
             </div>
           </div>
           
@@ -37,15 +37,14 @@ export default function FooterSection() {
           <div className="flex flex-col gap-2 items-center">
             <div className="text-white text-lg font-medium font-['Poppins'] leading-relaxed">Resources</div>
             <div className="flex flex-col gap-1 items-center">
-              <div className="text-white text-base font-normal font-['Poppins'] leading-relaxed">How it works?</div>
-              <div className="text-white text-base font-normal font-['Poppins'] leading-relaxed">FAQ</div>
-              <div className="text-white text-base font-normal font-['Poppins'] leading-relaxed">Blog</div>
+              <Link href="/get-started#how-it-works" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">How it works?</Link>
+              <Link href="/get-started#faq" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">FAQ</Link>
+              <Link href="/blog" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">Blog</Link>
             </div>
           </div>
         </div>
         
         <div className="flex flex-col justify-start items-center gap-2.5">
-          <div className="justify-start text-white text-base font-normal font-['Poppins'] leading-relaxed">or Learn More</div>
           <Link href="/get-started" className="w-44 h-12 bg-white rounded-[100px] flex items-center justify-center">
             <span className="text-green-900 text-xl font-medium font-['Poppins'] leading-relaxed">Ready to sell!</span>
           </Link>
@@ -56,10 +55,6 @@ export default function FooterSection() {
           />
         </div>
         
-        <div className="inline-flex justify-start items-center gap-11">
-          <div className="justify-start text-white text-xs font-normal font-['Poppins'] leading-none">Terms of Service</div>
-          <div className="justify-start text-white text-xs font-normal font-['Poppins'] leading-none">Privacy Policy</div>
-        </div>
       </footer>
 
       {/* Desktop Version */}
@@ -94,12 +89,6 @@ export default function FooterSection() {
                   </button>
                 </div>
 
-                {/* Legal Links */}
-                <div className="flex flex-wrap gap-4 sm:gap-6 text-gray-400 text-xs sm:text-sm font-light">
-                  <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
-                  <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
-                  <a href="#" className="hover:text-gray-300 transition-colors">Learn More</a>
-                </div>
               </div>
 
               {/* About Links */}
@@ -108,12 +97,12 @@ export default function FooterSection() {
                   About
                 </h3>
                 <div className="space-y-2">
-                  <a href="#" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
+                  <Link href="/#benefits" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
                     Benefits
-                  </a>
-                  <a href="#" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
+                  </Link>
+                  <Link href="/get-started#contact" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
                     Contact
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -123,15 +112,15 @@ export default function FooterSection() {
                   Resources
                 </h3>
                 <div className="space-y-2">
-                  <a href="#" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
+                  <Link href="/get-started#how-it-works" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
                     How it works
-                  </a>
-                  <a href="#" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
+                  </Link>
+                  <Link href="/get-started#faq" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
                     FAQ
-                  </a>
-                  <a href="#" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
+                  </Link>
+                  <Link href="/blog" className="block text-gray-300 text-sm font-light hover:text-white transition-colors">
                     Blog
-                  </a>
+                  </Link>
                 </div>
               </div>
 

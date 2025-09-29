@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import {
@@ -10,17 +11,73 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { Loader2 } from "lucide-react"
+
+interface VehicleFormData {
+  year: string;
+  make: string;
+  model: string;
+  kilometers: string;
+  vin: string;
+  name: string;
+  phone: string;
+  email: string;
+}
 
 export default function VehicleIntakeSection() {
-  const form = useForm()
+  const form = useForm<VehicleFormData>({
+    defaultValues: {
+      year: '',
+      make: '',
+      model: '',
+      kilometers: '',
+      vin: '',
+      name: '',
+      phone: '',
+      email: ''
+    }
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null)
 
-  function onSubmit(values: Record<string, unknown>) {
-    console.log(values)
+  async function onSubmit(values: VehicleFormData) {
+    setIsSubmitting(true)
+    setSubmitMessage(null)
+    
+    // Combine year, make, model into vehicleDetails for API compatibility
+    const formData = {
+      ...values,
+      vehicleDetails: `${values.year} ${values.make} ${values.model}`.trim()
+    }
+    
+    try {
+      const response = await fetch('/api/submit-vehicle-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitMessage({ type: 'success', text: 'Thank you! Your vehicle quote request has been submitted successfully. We\'ll contact you soon!' })
+        form.reset()
+      } else {
+        setSubmitMessage({ type: 'error', text: data.error || 'Failed to submit form. Please try again.' })
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitMessage({ type: 'error', text: 'Network error. Please check your connection and try again.' })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
-    <section className="w-full py-20 md:py-40 px-4 sm:px-6 pb-32 md:pb-48 bg-gradient-to-b from-green-600 to-green-800 flex flex-col justify-start items-center gap-8 md:gap-14 relative overflow-hidden">
-      <div className="w-full max-w-[630px] text-center justify-start text-white text-4xl sm:text-5xl md:text-7xl font-extrabold font-['Barlow'] leading-tight md:leading-[86px] px-4">
+    <section className="w-full py-12 md:py-20 px-4 sm:px-6 pb-20 md:pb-32 bg-gradient-to-b from-green-600 to-green-800 flex flex-col justify-start items-center gap-6 md:gap-10 relative overflow-hidden">
+      <div className="w-full max-w-[630px] text-center justify-start text-white text-4xl sm:text-5xl md:text-7xl font-extrabold font-['Barlow'] leading-tight md:leading-[60px] px-4">
         Get a quote for your vehicle today!
       </div>
       
@@ -37,93 +94,163 @@ export default function VehicleIntakeSection() {
       />
       
       {/* Form Container */}
-      <div className="w-full max-w-[630px] px-4 sm:px-6 py-6 md:py-10 relative z-20 flex flex-col justify-center items-center gap-6">
-        <div className="w-full h-auto min-h-[700px] md:h-[800px] left-0 top-0 absolute bg-white rounded-[20px] md:rounded-[40px] z-0" />
+      <div className="w-full max-w-[630px] relative z-20 flex flex-col justify-center items-center">
+        <div className="w-full bg-white rounded-[20px] md:rounded-[40px] px-4 sm:px-8 py-6 md:py-10 shadow-lg">
         
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="w-full relative z-10 flex flex-col gap-4 md:gap-6 items-center px-4">
-            <h2 className="text-center text-green-700 text-3xl sm:text-4xl md:text-5xl font-extrabold font-['Barlow'] leading-tight mb-2 md:mb-4">
-              Enter Vehicle details
-            </h2>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="w-full flex flex-col items-center gap-6 font-poppins">
             
-            {/* VIN Field with Barcode Icon */}
-            <div className="relative w-full max-w-xs sm:max-w-md">
+            {/* Vehicle Information Section */}
+            <div className="w-full text-center text-[#328640] text-[48px] font-barlow font-extrabold leading-[47px]">
+              Vehicle information
+            </div>
+
+            <div className="w-full flex flex-col gap-6">
+              {/* Year Field */}
               <FormField
                 control={form.control}
-                name="vin"
+                name="year"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="w-full">
+                    <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
+                      YEAR
+                    </div>
                     <FormControl>
                       <Input 
-                        placeholder="Enter V.I.N Number" 
-                        maxLength={17}
+                        type="number"
+                        placeholder="Select an option" 
                         required
                         {...field} 
-                        className="w-full h-12 px-4 bg-white border border-gray-300 rounded text-gray-900 placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-green-500"
+                        className="w-full h-12 px-5 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0"
                       />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <img 
-                src="https://static.wixstatic.com/media/5683bb_0d744ed157c84d3db570ebcca5920e04~mv2.png/v1/fill/w_29,h_29,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/barcode.png" 
-                alt="barcode" 
-                className="absolute right-3 top-3 w-6 h-6"
+
+              {/* Make and Model Row */}
+              <div className="flex gap-6">
+                <FormField
+                  control={form.control}
+                  name="make"
+                  render={({ field }) => (
+                    <FormItem className="flex-1">
+                      <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
+                        MAKE
+                      </div>
+                      <FormControl>
+                        <Input 
+                          type="text"
+                          placeholder="Select" 
+                          required
+                          {...field} 
+                          className="w-full h-12 px-5 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="model"
+                  render={({ field }) => (
+                    <FormItem className="flex-1">
+                      <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
+                        MODEL
+                      </div>
+                      <FormControl>
+                        <Input 
+                          type="text"
+                          placeholder="Select" 
+                          required
+                          {...field} 
+                          className="w-full h-12 px-5 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              {/* Kilometer Field */}
+              <FormField
+                control={form.control}
+                name="kilometers"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
+                      KILOMETER
+                    </div>
+                    <FormControl>
+                      <div className="relative">
+                        <Input 
+                          type="number"
+                          placeholder="type here" 
+                          required
+                          {...field} 
+                          className="w-full h-12 px-5 pr-16 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]"
+                        />
+                        <div className="absolute right-5 top-1/2 transform -translate-y-1/2 text-[#33853F] text-[15px] font-bold uppercase tracking-[3px]">
+                          KM
+                        </div>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              {/* VIN Field */}
+              <FormField
+                control={form.control}
+                name="vin"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
+                      VIN
+                    </div>
+                    <FormControl>
+                      <Input 
+                        type="text"
+                        placeholder="type here" 
+                        maxLength={17}
+                        required
+                        {...field} 
+                        className="w-full h-12 px-5 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
             </div>
 
-            {/* Kilometers Field */}
-            <FormField
-              control={form.control}
-              name="kilometers"
-              render={({ field }) => (
-                <FormItem className="w-full max-w-xs sm:max-w-md">
-                  <FormControl>
-                    <Input 
-                      type="number"
-                      placeholder="Enter Kilometers" 
-                      required
-                      {...field} 
-                      className="w-full h-12 px-4 bg-white border border-gray-300 rounded text-gray-900 placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-green-500"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* Contact Information Section */}
+            <div className="w-full text-center text-[#328640] text-[48px] font-barlow font-extrabold leading-[47px] mt-8">
+              Contact information
+            </div>
 
             {/* Name Field */}
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem className="w-full max-w-xs sm:max-w-md">
+                <FormItem className="w-full">
+                  <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
+                    FULL NAME
+                  </div>
                   <FormControl>
                     <Input 
-                      placeholder="Name" 
+                      type="text"
+                      placeholder="type here" 
                       maxLength={100}
-                      {...field} 
-                      className="w-full h-12 px-4 bg-white border border-gray-300 rounded text-gray-900 placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-green-500"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Vehicle Year, Make and Model Field */}
-            <FormField
-              control={form.control}
-              name="vehicleDetails"
-              render={({ field }) => (
-                <FormItem className="w-full max-w-xs sm:max-w-md">
-                  <FormControl>
-                    <Input 
-                      placeholder="Vehicle Year, Make and Model" 
                       required
                       {...field} 
-                      className="w-full h-12 px-4 bg-white border border-gray-300 rounded text-gray-900 placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-green-500"
+                      className="w-full h-12 px-5 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0"
                     />
                   </FormControl>
                   <FormMessage />
@@ -131,87 +258,82 @@ export default function VehicleIntakeSection() {
               )}
             />
 
-            {/* Phone Field with Icon */}
-            <div className="relative w-full max-w-xs sm:max-w-md">
-              <FormField
-                control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input 
-                        type="tel"
-                        placeholder="Phone" 
-                        maxLength={50}
-                        {...field} 
-                        className="w-full h-12 px-4 bg-white border border-gray-300 rounded text-gray-900 placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-green-500"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <img 
-                src="https://static.wixstatic.com/media/5683bb_2360359c87bf4e41861b12c74b1dab4e~mv2.png/v1/fill/w_22,h_22,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/telephone%20(5).png" 
-                alt="telephone" 
-                className="absolute right-3 top-3 w-5 h-5"
-              />
-            </div>
-
-            {/* Email Field with Icon */}
-            <div className="relative w-full max-w-xs sm:max-w-md">
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input 
-                        type="email"
-                        placeholder="Email" 
-                        required
-                        maxLength={250}
-                        {...field} 
-                        className="w-full h-12 px-4 bg-white border border-gray-300 rounded text-gray-900 placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-green-500"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <img 
-                src="https://static.wixstatic.com/media/5683bb_6cec0ec9bab9466ba425d274b7cab5ff~mv2.png/v1/fill/w_22,h_22,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/email%20(10).png" 
-                alt="email" 
-                className="absolute right-3 top-3 w-5 h-5"
-              />
-            </div>
-
-            {/* Promo Code Field */}
+            {/* Phone Field */}
             <FormField
               control={form.control}
-              name="promoCode"
+              name="phone"
               render={({ field }) => (
-                <FormItem className="w-full max-w-xs sm:max-w-md">
+                <FormItem className="w-full">
+                  <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
+                    PHONE NUMBER
+                  </div>
                   <FormControl>
                     <Input 
-                      placeholder="Promo Code" 
+                      type="number"
+                      placeholder="type here" 
+                      maxLength={50}
+                      required
                       {...field} 
-                      className="w-full h-12 px-4 bg-white border border-gray-300 rounded text-gray-900 placeholder:text-gray-500 focus-visible:ring-2 focus-visible:ring-green-500"
+                      className="w-full h-12 px-5 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]"
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
+
+            {/* Email Field */}
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
+                    EMAIL ADDRESS
+                  </div>
+                  <FormControl>
+                    <Input 
+                      type="email"
+                      placeholder="type here" 
+                      required
+                      maxLength={250}
+                      {...field} 
+                      className="w-full h-12 px-5 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            {/* Success/Error Message */}
+            {submitMessage && (
+              <div className={`w-full p-4 rounded-lg text-center text-sm font-medium ${
+                submitMessage.type === 'success' 
+                  ? 'bg-green-100 text-green-800 border border-green-200' 
+                  : 'bg-red-100 text-red-800 border border-red-200'
+              }`}>
+                {submitMessage.text}
+              </div>
+            )}
 
             <Button 
               type="submit" 
-              className="w-32 sm:w-36 h-10 sm:h-12 bg-green-600 hover:bg-green-700 text-white font-medium rounded transition-colors text-sm sm:text-base mt-2"
+              disabled={isSubmitting}
+              className="w-[212px] h-[56px] bg-gradient-to-b from-[#328640] to-[#41A552] hover:from-[#2a7236] hover:to-[#38943f] disabled:opacity-50 text-white font-medium text-[18px] leading-[26px] rounded-full transition-colors mt-4 flex items-center justify-center gap-2"
             >
-              Submit
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Submitting...
+                </>
+              ) : (
+                'Submit form'
+              )}
             </Button>
           </form>
         </Form>
+        </div>
       </div>
     </section>
   )

@@ -6,7 +6,6 @@ export default function HeroSection() {
     <div style={{
       width: '100%', 
       height: '100vh', 
-      marginTop: '64px', // For mobile (h-16)
       paddingLeft: '24px', 
       paddingRight: '24px', 
       paddingTop: '60px', 
@@ -19,7 +18,7 @@ export default function HeroSection() {
       justifyContent: 'flex-end', 
       gap: '10px', 
       display: 'inline-flex'
-    }} className="md:mt-20 lg:mt-24 items-center md:items-start md:bg-right">
+    }} className="items-center md:items-start md:bg-right">
       <div className="w-full max-w-md md:max-w-none md:w-[482px] mx-4 md:mx-0" style={{
         padding: '16px', 
         background: 'rgba(0, 0, 0, 0.40)', 
@@ -55,7 +54,6 @@ export default function HeroSection() {
         <div style={{
           justifyContent: 'flex-start', 
           alignItems: 'center', 
-          gap: '24px', 
           display: 'inline-flex'
         }}>
           <Link href="/get-started" style={{
@@ -86,34 +84,6 @@ export default function HeroSection() {
               Get Started
             </div>
           </Link>
-          <div style={{
-            paddingLeft: '16px', 
-            paddingRight: '16px', 
-            paddingTop: '8px', 
-            paddingBottom: '8px', 
-            borderRadius: '57.83px', 
-            outline: '2px white solid', 
-            outlineOffset: '-2px', 
-            justifyContent: 'center', 
-            alignItems: 'center', 
-            gap: '10px', 
-            display: 'flex'
-          }}>
-            <div style={{
-              textAlign: 'center', 
-              justifyContent: 'center', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              color: 'white', 
-              fontSize: '20px', 
-              fontFamily: 'Poppins', 
-              fontWeight: '500', 
-              lineHeight: '26px', 
-              wordWrap: 'break-word'
-            }}>
-              Learn More
-            </div>
-          </div>
         </div>
       </div>
     </div>

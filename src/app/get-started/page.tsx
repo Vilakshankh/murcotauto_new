@@ -3,8 +3,6 @@ import VehicleIntakeSection from '@/components/VehicleIntakeSection';
 import FAQSection from '@/components/FAQSection';
 import VideoSection from '@/components/VideoSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
-import BenefitsSection from '@/components/BenefitsSection';
-import AboutSection from '@/components/AboutSection';
 import FooterSection from '@/components/FooterSection';
 import ContactSection from '@/components/ContactSection';
 

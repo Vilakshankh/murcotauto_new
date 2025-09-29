@@ -36,7 +36,7 @@ export default function Blog() {
                     How to Sell Your Car Fast and Get the Best Price
                   </h2>
                   <p className="text-slate-600 text-lg font-light font-['Poppins'] leading-relaxed mb-6">
-                    Selling your car doesn't have to be stressful. Whether you want to sell online, trade it in, or find a buyer fast, the right approach will help you get top dollar with zero hassle.
+                    Selling your car doesn&apos;t have to be stressful. Whether you want to sell online, trade it in, or find a buyer fast, the right approach will help you get top dollar with zero hassle.
                   </p>
                   <Link 
                     href="/blog/selling-car-tips"
@@ -85,7 +85,7 @@ export default function Blog() {
                     How to Sell Your Car Fast and Get the Best Price
                   </h3>
                   <p className="text-slate-600 font-light font-['Poppins'] leading-relaxed mb-4 line-clamp-3">
-                    Selling your car doesn't have to be stressful. Whether you want to sell online, trade it in, or find a buyer fast, the right approach will help you get top dollar with zero hassle.
+                    Selling your car doesn&apos;t have to be stressful. Whether you want to sell online, trade it in, or find a buyer fast, the right approach will help you get top dollar with zero hassle.
                   </p>
                   <Link 
                     href="/blog/selling-car-tips"
@@ -113,7 +113,7 @@ export default function Blog() {
                     Top Tips for Selling Your Car Quickly in Montreal
                   </h3>
                   <p className="text-slate-600 font-light font-['Poppins'] leading-relaxed mb-4 line-clamp-3">
-                    Are you looking to sell your car quickly in Montreal? Whether you're upgrading to a newer model or simply need to let go of your current vehicle, there are several tips and tricks you can follow to ensure a smooth and speedy sale.
+                    Are you looking to sell your car quickly in Montreal? Whether you&apos;re upgrading to a newer model or simply need to let go of your current vehicle, there are several tips and tricks you can follow to ensure a smooth and speedy sale.
                   </p>
                   <Link 
                     href="/blog/montreal-car-selling"

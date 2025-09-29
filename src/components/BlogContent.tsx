@@ -14,7 +14,7 @@ export default function BlogContent() {
             5 Essential Tips for Selling Your Car Fast
           </h1>
           <p className="text-slate-600 text-lg font-light font-['Poppins'] leading-relaxed">
-            Selling your car doesn't have to be stressful. Whether you want to sell online, trade it in, or find a buyer fast, the right approach will help you get top dollar with zero hassle.
+            Selling your car doesn&apos;t have to be stressful. Whether you want to sell online, trade it in, or find a buyer fast, the right approach will help you get top dollar with zero hassle.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function BlogContent() {
                 1. Know Your Car's Value Before Selling
               </h2>
               <p className="text-slate-600 font-light font-['Poppins'] leading-relaxed mb-4">
-                Before listing your car for sale, it's important to understand how much it's worth. Your car's trade-in price is based on:
+                Before listing your car for sale, it&apos;s important to understand how much it&apos;s worth. Your car's trade-in price is based on:
               </p>
               <div className="space-y-2 mb-4">
                 <div className="flex items-start gap-3">

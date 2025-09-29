@@ -16,7 +16,7 @@ export default function FooterSection() {
           <Input
             type="email"
             placeholder="Your email"
-            className="w-56 h-10 rounded-[95.53px] border-2 border-white bg-transparent text-white text-lg font-medium font-['Poppins'] leading-relaxed placeholder-white placeholder-opacity-40 focus:border-gray-400 focus:outline-none"
+            className="w-56 h-10 rounded-[95.53px] border-2 border-white bg-transparent text-white text-lg font-medium font-['Poppins'] leading-relaxed placeholder-white/60 focus:border-white focus:outline-none focus:text-white"
           />
           <button className="w-32 h-10 bg-gradient-to-r from-white to-neutral-200 rounded-[95.53px] flex items-center justify-center">
             <span className="text-green-700 text-xl font-medium font-['Poppins'] leading-relaxed">Subscribe</span>
@@ -80,7 +80,7 @@ export default function FooterSection() {
                   <Input 
                     type="email" 
                     placeholder="Your email"
-                    className="flex-1 w-full sm:max-w-[250px] h-12 sm:h-10 px-4 rounded-full border border-white bg-transparent text-white text-base sm:text-sm font-light placeholder-white focus:border-gray-400 focus:outline-none"
+                    className="flex-1 w-full sm:max-w-[250px] h-12 sm:h-10 px-4 rounded-full border border-white bg-transparent text-white text-base sm:text-sm font-medium placeholder-white/60 focus:border-white focus:outline-none focus:text-white"
                   />
                   <button className="w-full sm:w-auto px-6 h-12 sm:h-10 bg-white text-slate-900 rounded-full hover:bg-gray-100 transition-colors">
                     <span className="text-sm font-medium tracking-wide">

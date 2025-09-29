@@ -17,7 +17,7 @@ export default function MontrealCarSelling() {
               Top Tips for Selling Your Car Quickly in Montreal
             </h1>
             <p className="text-slate-600 text-lg font-light font-['Poppins'] leading-relaxed">
-              Are you looking to sell your car quickly in Montreal? Whether you're upgrading to a newer model or simply need to let go of your current vehicle, there are several tips and tricks you can follow to ensure a smooth and speedy sale.
+              Are you looking to sell your car quickly in Montreal? Whether you&apos;re upgrading to a newer model or simply need to let go of your current vehicle, there are several tips and tricks you can follow to ensure a smooth and speedy sale.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export default function MontrealCarSelling() {
                   Consider a Local Auto Brokerage
                 </h2>
                 <p className="text-slate-600 font-light font-['Poppins'] leading-relaxed mb-4">
-                  If you're looking for a hassle-free selling experience, consider reaching out to a local auto brokerage like Murcot Auto Inc. to assist with the sale of your car. Auto brokers have the expertise and resources to market your vehicle effectively, negotiate with buyers on your behalf, and handle all the paperwork involved in the sales process.
+                  If you&apos;re looking for a hassle-free selling experience, consider reaching out to a local auto brokerage like Murcot Auto Inc. to assist with the sale of your car. Auto brokers have the expertise and resources to market your vehicle effectively, negotiate with buyers on your behalf, and handle all the paperwork involved in the sales process.
                 </p>
               </section>
 

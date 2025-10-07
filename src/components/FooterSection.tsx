@@ -1,52 +1,61 @@
+'use client';
+
 import Link from 'next/link';
 import { Input } from '@/components/ui/input';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function FooterSection() {
+  const { t } = useLanguage();
   return (
     <>
       {/* Mobile Version */}
       <footer className="block md:hidden w-full h-[922px] px-9 py-12 bg-green-700 inline-flex flex-col justify-center items-center gap-11">
         <div className="w-full max-w-md flex flex-col justify-start items-center gap-3.5">
           <div className="w-full max-w-md text-center justify-start text-white text-4xl font-extrabold font-['Barlow'] leading-10">
-            200,000 <br/>satisfied customers <br/>since 1993
+            {t('footer.satisfiedCustomers').split('\n').map((line, index) => (
+              <span key={index}>
+                {line}
+                {index < t('footer.satisfiedCustomers').split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </div>
           <div className="w-80 text-center justify-start text-white text-base font-normal font-['Poppins'] leading-snug">
-            We&apos;ve tailored our services to provide the best experience for our customers since day 1.
+            {t('footer.description')}
           </div>
           <Input
             type="email"
-            placeholder="Your email"
+            placeholder={t('footer.emailPlaceholder')}
             className="w-56 h-10 rounded-[95.53px] border-2 border-white bg-transparent text-white text-lg font-medium font-['Poppins'] leading-relaxed placeholder-white/60 focus:border-white focus:outline-none focus:text-white"
           />
           <button className="w-32 h-10 bg-gradient-to-r from-white to-neutral-200 rounded-[95.53px] flex items-center justify-center">
-            <span className="text-green-700 text-xl font-medium font-['Poppins'] leading-relaxed">Subscribe</span>
+            <span className="text-green-700 text-xl font-medium font-['Poppins'] leading-relaxed">{t('footer.subscribe')}</span>
           </button>
         </div>
         
         <div className="self-stretch flex flex-col gap-6">
           {/* About Section */}
           <div className="flex flex-col gap-2 items-center">
-            <div className="text-white text-lg font-medium font-['Poppins'] leading-relaxed">About</div>
+            <div className="text-white text-lg font-medium font-['Poppins'] leading-relaxed">{t('footer.about')}</div>
             <div className="flex flex-col gap-1 items-center">
-              <Link href="/#benefits" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">Benefits</Link>
-              <Link href="/get-started#contact" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">Contact</Link>
+              <Link href="/#benefits" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">{t('footer.benefits')}</Link>
+              <Link href="/get-started#contact" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">{t('footer.contact')}</Link>
             </div>
           </div>
           
           {/* Resources Section */}
           <div className="flex flex-col gap-2 items-center">
-            <div className="text-white text-lg font-medium font-['Poppins'] leading-relaxed">Resources</div>
+            <div className="text-white text-lg font-medium font-['Poppins'] leading-relaxed">{t('footer.resources')}</div>
             <div className="flex flex-col gap-1 items-center">
-              <Link href="/get-started#how-it-works" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">How it works?</Link>
-              <Link href="/get-started#faq" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">FAQ</Link>
-              <Link href="/blog" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">Blog</Link>
+              <Link href="/get-started#how-it-works" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">{t('footer.howItWorks')}</Link>
+              <Link href="/get-started#faq" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">{t('footer.faq')}</Link>
+              <Link href="/blog" className="text-white text-base font-normal font-['Poppins'] leading-relaxed hover:text-gray-300 transition-colors">{t('footer.blog')}</Link>
             </div>
           </div>
         </div>
         
         <div className="flex flex-col justify-start items-center gap-2.5">
           <Link href="/get-started" className="w-44 h-12 bg-white rounded-[100px] flex items-center justify-center">
-            <span className="text-green-900 text-xl font-medium font-['Poppins'] leading-relaxed">Ready to sell!</span>
+            <span className="text-green-900 text-xl font-medium font-['Poppins'] leading-relaxed">{t('nav.readyToSell')}</span>
           </Link>
           <img 
             className="w-80 h-24 object-contain" 

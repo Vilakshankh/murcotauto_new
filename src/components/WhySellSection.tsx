@@ -1,6 +1,10 @@
+'use client';
+
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function WhySellSection() {
+  const { t } = useLanguage();
   return (
     <>
       {/* Mobile Version */}
@@ -12,18 +16,23 @@ export default function WhySellSection() {
         />
         <div className="w-full max-w-md px-6 pt-6 flex flex-col justify-start items-start gap-6">
           <div className="self-stretch justify-start text-white text-5xl font-extrabold font-['Barlow'] leading-10">
-            Why sell to <br/>Murcot Auto?
+            {t('whySell.title').split('\n').map((line, index) => (
+              <span key={index}>
+                {line}
+                {index < t('whySell.title').split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </div>
           <div className="self-stretch justify-start">
-            <span className="text-white text-xl font-semibold font-['Poppins'] leading-tight">Sell with Confidence<br/></span>
-            <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">Trusted by Sellers Since 1993<br/></span>
-            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">Over 30 years of proven experience in vehicle buying.<br/></span>
-            <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">Serving All of Quebec and Ontario<br/></span>
-            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">We&apos;re local, and we&apos;re everywhere you need us to be.</span>
+            <span className="text-white text-xl font-semibold font-['Poppins'] leading-tight">{t('whySell.sellWithConfidence')}<br/></span>
+            <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">{t('whySell.trustedSince')}<br/></span>
+            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">{t('whySell.experience')}<br/></span>
+            <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">{t('whySell.servingRegions')}<br/></span>
+            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">{t('whySell.localEverywhere')}</span>
           </div>
           <div className="self-stretch flex justify-start items-center">
             <Link href="/get-started" className="px-4 py-2 bg-white rounded-[57.83px] flex justify-center items-center gap-2.5">
-              <div className="text-center justify-center text-green-700 text-xl font-medium font-['Poppins'] leading-relaxed">Get Started</div>
+              <div className="text-center justify-center text-green-700 text-xl font-medium font-['Poppins'] leading-relaxed">{t('whySell.getStarted')}</div>
             </Link>
           </div>
         </div>
@@ -40,18 +49,23 @@ export default function WhySellSection() {
         </div>
         <div className="flex-1 px-6 py-14 inline-flex flex-col justify-center items-start gap-6">
           <div className="self-stretch justify-start text-white text-5xl font-extrabold font-['Barlow'] leading-10">
-            Why sell to <br/>Murcot Auto?
+            {t('whySell.title').split('\n').map((line, index) => (
+              <span key={index}>
+                {line}
+                {index < t('whySell.title').split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </div>
           <div className="self-stretch justify-start">
-            <span className="text-white text-xl font-semibold font-['Poppins'] leading-tight">Sell with Confidence<br/></span>
-            <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">Trusted by Sellers Since 1993<br/></span>
-            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">Over 30 years of proven experience in vehicle buying.<br/></span>
-            <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">Serving All of Quebec and Ontario<br/></span>
-            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">We&apos;re local, and we&apos;re everywhere you need us to be.</span>
+            <span className="text-white text-xl font-semibold font-['Poppins'] leading-tight">{t('whySell.sellWithConfidence')}<br/></span>
+            <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">{t('whySell.trustedSince')}<br/></span>
+            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">{t('whySell.experience')}<br/></span>
+            <span className="text-white text-base font-semibold font-['Poppins'] leading-tight">{t('whySell.servingRegions')}<br/></span>
+            <span className="text-white text-base font-normal font-['Poppins'] leading-tight">{t('whySell.localEverywhere')}</span>
           </div>
           <div className="self-stretch flex justify-start items-center">
             <Link href="/get-started" className="px-4 py-2 bg-white rounded-[57.83px] flex justify-center items-center gap-2.5">
-              <div className="text-center justify-center text-green-700 text-xl font-medium font-['Poppins'] leading-relaxed">Get Started</div>
+              <div className="text-center justify-center text-green-700 text-xl font-medium font-['Poppins'] leading-relaxed">{t('whySell.getStarted')}</div>
             </Link>
           </div>
         </div>

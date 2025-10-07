@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import { Play, X } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function VideoSection() {
+  const { t } = useLanguage();
   const [showVideo, setShowVideo] = useState(false);
 
   const openVideo = () => setShowVideo(true);
@@ -60,7 +62,7 @@ export default function VideoSection() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
           {/* How it Works Text */}
           <div className="text-right text-white text-3xl md:text-4xl lg:text-[42px] font-bold font-['DM Sans'] leading-tight md:leading-[52px]">
-            How it Works?
+            {t('video.howItWorks')}
           </div>
           
           {/* Play Button */}
@@ -75,7 +77,7 @@ export default function VideoSection() {
           
           {/* Watch Our Video Text */}
           <div className="text-left text-white text-3xl md:text-4xl lg:text-[42px] font-bold font-['DM Sans'] leading-tight md:leading-[52px]">
-            Watch Our Video
+            {t('video.watchOurVideo')}
           </div>
         </div>
       </div>

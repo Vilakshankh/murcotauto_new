@@ -1,5 +1,10 @@
 
+'use client';
+
+import { useLanguage } from '@/contexts/LanguageContext';
+
 export default function ReviewsSection() {
+  const { t } = useLanguage();
   return (
     <section className="w-full bg-white pb-16">
       <div className="px-6 sm:px-6 lg:px-8">
@@ -7,7 +12,7 @@ export default function ReviewsSection() {
           {/* Reviews Section */}
           <div className="text-center pt-16 sm:pt-24">
             <div className="w-72 text-center justify-start text-green-700 text-5xl font-extrabold font-['Barlow'] leading-10 mb-8 sm:mb-12 mx-auto">
-              What they say about us!
+              {t('reviews.title')}
             </div>
           </div>
           
@@ -76,7 +81,7 @@ export default function ReviewsSection() {
               className="px-4 py-2 bg-white rounded-[57.83px] flex justify-center items-center gap-2.5 outline outline-2 outline-green-700 hover:bg-green-50 transition-colors inline-flex"
             >
               <div className="text-center justify-center text-green-700 text-xl font-medium font-['Poppins'] leading-relaxed">
-                View More Reviews
+                {t('reviews.viewMore')}
               </div>
             </a>
           </div>

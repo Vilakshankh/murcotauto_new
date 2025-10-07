@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   return (
     <div style={{
       width: '100%', 
@@ -38,7 +42,12 @@ export default function HeroSection() {
           lineHeight: '49.73px', 
           wordWrap: 'break-word'
         }}>
-          Selling your car, <br/>made easy!
+          {t('hero.title').split('\n').map((line, index) => (
+            <span key={index}>
+              {line}
+              {index < t('hero.title').split('\n').length - 1 && <br />}
+            </span>
+          ))}
         </div>
         <div style={{
           alignSelf: 'stretch', 
@@ -49,7 +58,7 @@ export default function HeroSection() {
           lineHeight: '21px', 
           wordWrap: 'break-word'
         }}>
-          Ready to sell your car? Get a fast, no-obligation quote from Murcot Auto in just minutes. Whether it&apos;s financed, leased, or needs a little work — we make it easy.
+          {t('hero.description')}
         </div>
         <div style={{
           justifyContent: 'flex-start', 
@@ -81,7 +90,7 @@ export default function HeroSection() {
               lineHeight: '26px', 
               wordWrap: 'break-word'
             }}>
-              Get Started
+              {t('hero.getStarted')}
             </div>
           </Link>
         </div>

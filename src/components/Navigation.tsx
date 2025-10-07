@@ -1,10 +1,12 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { X, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { X, Linkedin, Instagram, Facebook, Globe } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <>
@@ -24,34 +26,57 @@ export default function Navigation() {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              HOME
+              {t('nav.home')}
             </Link>
             <Link href="/#about-us" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              ABOUT US
+              {t('nav.aboutUs')}
             </Link>
             <Link href="/#benefits" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              BENEFITS
+              {t('nav.benefits')}
             </Link>
             <Link href="/get-started#how-it-works" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              HOW IT WORKS
+              {t('nav.howItWorks')}
             </Link>
             <Link href="/blog" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              BLOG
+              {t('nav.blog')}
             </Link>
             <Link href="/get-started#contact" className="text-slate-600 text-sm font-medium hover:text-slate-900 transition-colors tracking-wide">
-              CONTACT US
+              {t('nav.contactUs')}
             </Link>
+            
+            {/* Language Toggle */}
+            <div className="flex items-center">
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')}
+                className="flex items-center space-x-2 px-3 py-2 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white text-sm font-medium rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                <Globe className="w-4 h-4 text-white" />
+                <span className="tracking-wide">
+                  {language === 'en' ? 'FR' : 'EN'}
+                </span>
+              </button>
+            </div>
             
             {/* Sell Button */}
             <Link href="/get-started" className="px-6 py-2.5 bg-green-700 text-white text-sm font-medium rounded-lg hover:bg-green-600 transition-all tracking-wide">
-              SELL NOW
+              {t('nav.sellNow')}
             </Link>
           </div>
 
           {/* Mobile Sell Button and Menu Button */}
           <div className="lg:hidden flex items-center gap-3">
+            {/* Mobile Language Toggle */}
+            <button
+              onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')}
+              className="flex items-center space-x-1 px-2 py-1.5 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white text-xs font-medium rounded-md transition-all duration-200 shadow-sm"
+            >
+              <Globe className="w-3 h-3 text-white" />
+              <span>
+                {language === 'en' ? 'FR' : 'EN'}
+              </span>
+            </button>
             <Link href="/get-started" className="px-4 py-2 bg-green-700 text-white text-xs font-medium rounded-lg hover:bg-green-600 transition-all tracking-wide">
-              SELL NOW
+              {t('nav.sellNow')}
             </Link>
             <button 
               className="p-2"
@@ -90,7 +115,7 @@ export default function Navigation() {
                 className="self-stretch px-4 py-2 bg-gradient-to-b from-green-700 to-green-600 rounded-[57.83px] inline-flex justify-center items-center gap-2.5"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <div className="text-center justify-center text-white text-xl font-medium font-['Poppins'] leading-relaxed">Ready to sell!</div>
+                <div className="text-center justify-center text-white text-xl font-medium font-['Poppins'] leading-relaxed">{t('nav.readyToSell')}</div>
               </Link>
               
               <Link 
@@ -98,7 +123,7 @@ export default function Navigation() {
                 className="self-stretch text-center justify-center text-slate-700 text-xl font-medium font-['Poppins'] leading-relaxed hover:text-slate-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                {t('nav.home.mobile')}
               </Link>
               
               <Link 
@@ -106,7 +131,7 @@ export default function Navigation() {
                 className="self-stretch text-center justify-center text-slate-700 text-xl font-medium font-['Poppins'] leading-relaxed hover:text-slate-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                How it Works?
+                {t('nav.howItWorks.mobile')}
               </Link>
               
               <Link 
@@ -114,7 +139,7 @@ export default function Navigation() {
                 className="self-stretch text-center justify-center text-slate-700 text-xl font-medium font-['Poppins'] leading-relaxed hover:text-slate-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About Us
+                {t('nav.aboutUs.mobile')}
               </Link>
               
               <Link 
@@ -122,7 +147,7 @@ export default function Navigation() {
                 className="self-stretch text-center justify-center text-slate-700 text-xl font-medium font-['Poppins'] leading-relaxed hover:text-slate-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                FAQs
+                {t('nav.faqs.mobile')}
               </Link>
               
               <Link 
@@ -130,8 +155,24 @@ export default function Navigation() {
                 className="self-stretch text-center justify-center text-slate-700 text-xl font-medium font-['Poppins'] leading-relaxed hover:text-slate-900 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Blog
+                {t('nav.blog.mobile')}
               </Link>
+              
+              {/* Mobile Menu Language Toggle */}
+              <div className="flex justify-center py-2">
+                <button
+                  onClick={() => {
+                    setLanguage(language === 'en' ? 'fr' : 'en');
+                    setIsMenuOpen(false);
+                  }}
+                  className="flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-green-700 to-green-600 hover:from-green-600 hover:to-green-500 text-white text-lg font-medium font-['Poppins'] rounded-full transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  <Globe className="w-5 h-5 text-white" />
+                  <span>
+                    {language === 'en' ? 'Français' : 'English'}
+                  </span>
+                </button>
+              </div>
               
               <div className="inline-flex justify-center items-center gap-6">
                 <button className="text-green-700 hover:text-green-600 transition-colors cursor-pointer">

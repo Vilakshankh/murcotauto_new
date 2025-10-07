@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Loader2 } from "lucide-react"
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface VehicleFormData {
   year: string;
@@ -25,6 +26,7 @@ interface VehicleFormData {
 }
 
 export default function VehicleIntakeSection() {
+  const { t } = useLanguage()
   const form = useForm<VehicleFormData>({
     defaultValues: {
       year: '',
@@ -62,14 +64,14 @@ export default function VehicleIntakeSection() {
       const data = await response.json()
 
       if (response.ok) {
-        setSubmitMessage({ type: 'success', text: 'Thank you! Your vehicle quote request has been submitted successfully. We\'ll contact you soon!' })
+        setSubmitMessage({ type: 'success', text: t('vehicleIntake.successMessage') })
         form.reset()
       } else {
-        setSubmitMessage({ type: 'error', text: data.error || 'Failed to submit form. Please try again.' })
+        setSubmitMessage({ type: 'error', text: data.error || t('vehicleIntake.errorMessage') })
       }
     } catch (error) {
       console.error('Form submission error:', error)
-      setSubmitMessage({ type: 'error', text: 'Network error. Please check your connection and try again.' })
+      setSubmitMessage({ type: 'error', text: t('vehicleIntake.networkError') })
     } finally {
       setIsSubmitting(false)
     }
@@ -78,7 +80,7 @@ export default function VehicleIntakeSection() {
   return (
     <section className="w-full py-12 md:py-20 px-4 sm:px-6 pb-20 md:pb-32 bg-gradient-to-b from-green-600 to-green-800 flex flex-col justify-start items-center gap-6 md:gap-10 relative overflow-hidden">
       <div className="w-full max-w-[630px] text-center justify-start text-white text-4xl sm:text-5xl md:text-7xl font-extrabold font-['Barlow'] leading-tight md:leading-[60px] px-4">
-        Get a quote for your vehicle today!
+        {t('vehicleIntake.title')}
       </div>
       
       {/* Standing Images - positioned to lean on the form, hidden on mobile */}
@@ -102,7 +104,7 @@ export default function VehicleIntakeSection() {
             
             {/* Vehicle Information Section */}
             <div className="w-full text-center text-[#328640] text-[48px] font-barlow font-extrabold leading-[47px]">
-              Vehicle information
+              {t('vehicleIntake.vehicleInfo')}
             </div>
 
             <div className="w-full flex flex-col gap-6">
@@ -113,12 +115,12 @@ export default function VehicleIntakeSection() {
                 render={({ field }) => (
                   <FormItem className="w-full">
                     <div className="text-[#979797] text-[15px] font-bold uppercase tracking-[3px] leading-[26px] mb-2">
-                      YEAR
+                      {t('vehicleIntake.year')}
                     </div>
                     <FormControl>
                       <Input 
                         type="number"
-                        placeholder="Select an option" 
+                        placeholder={t('vehicleIntake.selectOption')} 
                         required
                         {...field} 
                         className="w-full h-12 px-5 bg-white rounded-[10px] border-2 border-[#33853F] text-[#1F1F1F] text-[20px] font-medium leading-[26px] placeholder:text-[#E5E5E5] focus-visible:ring-2 focus-visible:ring-[#33853F] focus-visible:ring-offset-0"
@@ -231,7 +233,7 @@ export default function VehicleIntakeSection() {
 
             {/* Contact Information Section */}
             <div className="w-full text-center text-[#328640] text-[48px] font-barlow font-extrabold leading-[47px] mt-8">
-              Contact information
+              {t('vehicleIntake.contactInfo')}
             </div>
 
             {/* Name Field */}
@@ -325,10 +327,10 @@ export default function VehicleIntakeSection() {
               {isSubmitting ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  Submitting...
+                  {t('vehicleIntake.submitting')}
                 </>
               ) : (
-                'Submit form'
+                t('vehicleIntake.submitForm')
               )}
             </Button>
           </form>

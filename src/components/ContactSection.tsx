@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { Loader2 } from "lucide-react"
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface ContactFormData {
   email: string;
@@ -11,6 +12,7 @@ interface ContactFormData {
 }
 
 export default function ContactSection() {
+  const { t } = useLanguage()
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>({
     defaultValues: {
       email: '',
@@ -37,14 +39,14 @@ export default function ContactSection() {
       const data = await response.json()
 
       if (response.ok) {
-        setSubmitMessage({ type: 'success', text: 'Thank you! Your message has been sent successfully. We\'ll get back to you soon!' })
+        setSubmitMessage({ type: 'success', text: t('contact.successMessage') })
         reset()
       } else {
-        setSubmitMessage({ type: 'error', text: data.error || 'Failed to send message. Please try again.' })
+        setSubmitMessage({ type: 'error', text: data.error || t('contact.errorMessage') })
       }
     } catch (error) {
       console.error('Form submission error:', error)
-      setSubmitMessage({ type: 'error', text: 'Network error. Please check your connection and try again.' })
+      setSubmitMessage({ type: 'error', text: t('contact.networkError') })
     } finally {
       setIsSubmitting(false)
     }
@@ -66,10 +68,10 @@ export default function ContactSection() {
                   {/* Form Heading */}
                   <div className="mb-6">
                     <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-['Barlow'] text-green-700 tracking-tight leading-tight mb-3">
-                      Drop Us a Line
+                      {t('contact.dropUsALine')}
                     </h3>
                     <p className="text-slate-600 font-light leading-relaxed">
-                      We are always looking to buy your vehicle!
+                      {t('contact.description')}
                     </p>
                   </div>
 
@@ -189,11 +191,11 @@ export default function ContactSection() {
                 <div className="space-y-6">
                   {/* Get in Touch Heading */}
                   <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-['Barlow'] text-green-700 tracking-tight leading-tight">
-                    Get in Touch
+                    {t('contact.getInTouch')}
                   </h3>                  
                   {/* Description */}
                   <p className="text-slate-600 font-light leading-relaxed text-lg">
-                    Murcot Auto treats you like family — that&apos;s why so many trust us to sell their car with ease.
+                    {t('contact.treatLikeFamily')}
                   </p>
 
 
@@ -208,7 +210,7 @@ export default function ContactSection() {
                         </svg>
                       </div>
                       <span className="text-slate-900 font-light">
-                        +1 514 927 1539
+                        {t('contact.phone')}
                       </span>
                     </div>
 
@@ -220,7 +222,7 @@ export default function ContactSection() {
                         </svg>
                       </div>
                       <span className="text-slate-900 font-light">
-                        info@murcotauto.com
+                        {t('contact.emailAddress')}
                       </span>
                     </div>
                   </div>
@@ -230,7 +232,7 @@ export default function ContactSection() {
 
                   {/* Social Media Section */}
                   <h4 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-['Barlow'] text-green-700 tracking-tight">
-                    Follow Us
+                    {t('contact.followUs')}
                   </h4>
 
                   {/* Social Links */}

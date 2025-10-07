@@ -4,14 +4,6 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'en' | 'fr';
 
-interface LanguageContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
-}
-
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
 // Translation data
 const translations = {
   en: {
@@ -328,11 +320,21 @@ const translations = {
   }
 };
 
+type TranslationKey = keyof typeof translations.en;
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: TranslationKey | string) => string;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
 
-  const t = (key: string): string => {
-    return translations[language][key] || key;
+  const t = (key: TranslationKey | string): string => {
+    return translations[language][key as TranslationKey] || key;
   };
 
   return (
